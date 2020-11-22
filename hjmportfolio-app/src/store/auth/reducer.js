@@ -3,12 +3,6 @@ import {
   LOGIN_FAILURE,
   LOGIN_SUCCESS,
   LOGOUT,
-  SIGNUP_REQUEST,
-  SIGNUP_FAILURE,
-  SIGNUP_SUCCESS,
-  SILENT_REFRESH,
-  RESET_SUCCESS,
-  RESET_FAILURE,
 } from '../actionTypes';
 
 const startState = {
@@ -19,7 +13,6 @@ const startState = {
   successMessage: null,
   userLoadedAt: 0,
   loggedIn: false,
-  silentRefreshAt: 0,
 };
 
 export default function userReducer(state = startState, action) {
@@ -51,7 +44,6 @@ export default function userReducer(state = startState, action) {
         loggedIn: authenticated,
         accessToken: token,
         userLoadedAt: Date.now(),
-        silentRefreshAt: Date.now(),
       };
     }
     case LOGOUT: {
@@ -62,49 +54,6 @@ export default function userReducer(state = startState, action) {
         errorMessage: null,
         loggedIn: false,
         accessToken: null,
-      };
-    }
-    case SIGNUP_REQUEST: {
-      return {
-        ...state,
-      };
-    }
-    case SIGNUP_FAILURE: {
-      const { errorMessage } = payload;
-      return {
-        ...state,
-        errorMessage,
-      };
-    }
-    case RESET_FAILURE: {
-      const { errorMessage } = payload;
-      return {
-        ...state,
-        errorMessage,
-      };
-    }
-    case RESET_SUCCESS: {
-      const { successMessage } = payload;
-      return {
-        ...state,
-        successMessage,
-      };
-    }
-    case SIGNUP_SUCCESS: {
-      return {
-        ...state,
-      };
-    }
-    case SILENT_REFRESH: {
-      const { data } = payload;
-      const { user, authenticated, token } = data;
-      return {
-        ...state,
-        currentUser: user,
-        loggedIn: authenticated,
-        accessToken: token,
-        silentRefreshAt: Date.now(),
-        userLoadedAt: Date.now(),
       };
     }
     default:

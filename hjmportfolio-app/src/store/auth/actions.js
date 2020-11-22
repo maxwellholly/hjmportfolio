@@ -3,16 +3,10 @@ import API from '../../API';
 
 import {
   SET_USER,
-  LOGIN_REQUEST,
-  LOGIN_FAILURE,
-  LOGIN_SUCCESS,
-  LOGOUT,
-  SIGNUP_REQUEST,
-  SIGNUP_FAILURE,
-  SIGNUP_SUCCESS,
-  SILENT_REFRESH,
-  RESET_FAILURE,
-  RESET_SUCCESS,
+    LOGIN_SUCCESS,
+    LOGIN_REQUEST,
+    LOGIN_FAILURE,
+    LOGOUT
 } from '../actionTypes';
 import { shouldLoad } from '../_utils';
 
@@ -35,23 +29,6 @@ export const saveUser = (user) => async (dispatch, getState) => {
   }
 };
 
-export const createUser = (user) => async (dispatch) => {
-  const config = {
-    headers: {
-      'Content-Type': 'application/json;charset=UTF-8',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS',
-    },
-  };
-  const newUser = await API.post('/auth/signup', user, config);
-  dispatch({ type: SIGNUP_REQUEST });
-  if (newUser) {
-    dispatch({ type: SIGNUP_SUCCESS });
-  } else {
-    dispatch({ type: SIGNUP_FAILURE });
-  }
-};
-
 export const authUser = (credentials) => async (dispatch) => {
   const { email, password } = credentials;
   dispatch({ type: LOGIN_REQUEST });
@@ -69,8 +46,7 @@ export const authUser = (credentials) => async (dispatch) => {
           });
         }, 5000);
       } else {
-        const { refreshToken, token, authenticated } = res;
-        localStorage.setItem('refreshToken', refreshToken);
+        const { token, authenticated } = res;
         const data = {
           token,
           authenticated,
@@ -96,75 +72,5 @@ export const authUser = (credentials) => async (dispatch) => {
 };
 
 export const logout = () => async (dispatch) => {
-  localStorage.removeItem('refreshToken');
   dispatch({ type: LOGOUT });
-};
-
-export const silentRefresh = () => async (dispatch, getState) => {
-  const token = localStorage.getItem('refreshToken');
-  console.log('trying to refresh');
-  const {
-    auth: { silentRefreshAt },
-  } = getState();
-  const config = {
-    refreshToken: token,
-  };
-  if (!shouldLoad(silentRefreshAt)) return;
-  if (!token) return;
-  await API.post('/auth/refresh_token', config)
-    .then((res) => {
-      const { newRefreshToken, newAccessToken, authenticated } = res;
-      localStorage.setItem('refreshToken', newRefreshToken);
-      const data = {
-        token: newAccessToken,
-        authenticated,
-        user: { ...jwtDecode(newAccessToken) },
-      };
-      dispatch({
-        type: SILENT_REFRESH,
-        data,
-      });
-    })
-    .catch(() => {
-      dispatch({
-        type: LOGIN_FAILURE,
-        errorMessage: null,
-      });
-    });
-};
-
-export const forgotPassword = (credentials) => async (dispatch) => {
-  const { email } = credentials;
-  await API.post('/auth/forgot_password', { email })
-    .then((res) => {
-      const { successMessage } = res;
-      dispatch({
-        type: RESET_SUCCESS,
-        successMessage,
-      });
-    })
-    .catch(() => {
-      dispatch({
-        type: RESET_FAILURE,
-        errorMessage: 'An error occurred',
-      });
-    });
-};
-
-export const resetPassword = (data) => async (dispatch) => {
-  const { password, userId, token } = data;
-  await API.post('/auth/reset_password', { password, userId, token })
-    .then((res) => {
-      const { successMessage } = res;
-      dispatch({
-        type: RESET_SUCCESS,
-        successMessage,
-      });
-    })
-    .catch(() => {
-      dispatch({
-        type: RESET_FAILURE,
-        errorMessage: 'An error occurred',
-      });
-    });
 };
