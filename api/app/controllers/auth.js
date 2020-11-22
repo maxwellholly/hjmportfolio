@@ -1,4 +1,4 @@
-const { Users } = require("../models");
+/*const { Users } = require('../models');
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
@@ -35,4 +35,4 @@ exports.authUser = async (req, res) => {
   } catch (e) {
     res.status(401).json({ e });
   }
-};
+};*/

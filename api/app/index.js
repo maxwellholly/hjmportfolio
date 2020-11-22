@@ -19,7 +19,7 @@ app.use(morganDebug("api:request", "dev"));
 // open cors
 app.use(cors());
 
-// app setup to use router at /asks, /reviews, /categories
+// app setup to use routers
 app.use("/posts", postsRouter);
 app.use("/auth", authRouter);
 
