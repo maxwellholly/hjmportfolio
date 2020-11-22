@@ -25,7 +25,8 @@ module.exports = (sequelize, DataTypes) => {
               unique: {args: true, msg: "Sorry, this email is already in use"},
               allowNull: {args: false, msg: "Email is required"},
           },
-      }
+      },
+      {}
   );
 
   return Users;

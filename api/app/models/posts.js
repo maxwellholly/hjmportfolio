@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Posts = sequelize.define(
-    "Asks",
+    "Posts",
     {
       id: {
         defaultValue: DataTypes.UUIDV4,
@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
       },
     },
+      {}
   );
   return Posts;
 };
