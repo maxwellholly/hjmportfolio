@@ -1,4 +1,4 @@
-/*const { Posts } = require('../models');
+const { Posts } = require('../models');
 
 exports.getAllPosts = async (req, res) => {
   try {
@@ -25,7 +25,7 @@ exports.createPost = async (req, res) => {
   } catch (e) {
     res.status(400).json({ e });
   }
-};*/
+};
 
 exports.updatePost = async (req, res) => {
   const { id } = req.params;
