@@ -11,7 +11,7 @@ class Blog extends Component {
                 </div>
                 <article>
                     <img className={styles.blogImg} src="https://images.unsplash.com/photo-1592477725143-2e57dc728f0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1390&q=80" alt="Augmented Reality"/>
-                    <h2>Building an Augmented Reality with React</h2>
+                    <h2 className={styles.blogT}>Building an Augmented Reality with React</h2>
                     <p className={styles.blogPost}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Id aliquet lectus proin nibh nisl condimentum id venenatis. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Urna neque viverra justo nec ultrices dui sapien. Eget nunc lobortis mattis aliquam faucibus purus in. Egestas maecenas pharetra convallis posuere morbi leo. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Nulla pellentesque dignissim enim sit. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Cursus metus aliquam eleifend mi. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Est sit amet facilisis magna etiam tempor. Quam adipiscing vitae proin sagittis.
 
