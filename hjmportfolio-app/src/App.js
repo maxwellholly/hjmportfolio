@@ -7,8 +7,8 @@ import Nav from './components/nav/Nav';
 export default function App() {
     return (
         <Router className="main-content">
-            <Nav />
             <div className="App">
+                <Nav />
                 <Routes />
             </div>
         </Router>

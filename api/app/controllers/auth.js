@@ -1,6 +1,7 @@
 const { Users } = require('../models/users');
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+const nodemailer = require("nodemailer");
 
 exports.authUser = async (req, res) => {
   const { username, password } = req.body;
@@ -34,5 +35,23 @@ exports.authUser = async (req, res) => {
     }
   } catch (e) {
     res.status(401).json({ e });
+  }
+};
+
+exports.contact = async (req, res) => {
+  const { data } = req.body;
+  const transporter = nodemailer.createTransport({
+    host: "smtp.mailtrap.io",
+    port: 2525,
+    auth: {
+      user: "374bbeb2bebcdd",
+      pass: "fa5940383fde17",
+    },
+  });
+  try{
+      await transporter.sendMail(data).then(res.json({successMessage: 'Message sent!'}));
+
+  } catch (e) {
+    res.status(400).json({ errorMessage: 'Something went wrong' });
   }
 };

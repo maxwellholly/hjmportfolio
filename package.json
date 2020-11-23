@@ -18,6 +18,8 @@
     "concurrently": "^5.3.0"
   },
   "dependencies": {
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "nodemailer": "^6.4.16",
     "nodemon": "^2.0.6"
   }
 }

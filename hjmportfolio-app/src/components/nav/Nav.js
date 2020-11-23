@@ -9,10 +9,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/Menu';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {NavLink} from 'react-router-dom';
-
 
 const drawerWidth = '30%';
 const appBarHeight = '10%';
@@ -103,7 +101,7 @@ const Nav = props =>{
         <div>
             <div className={classes.toolbar} />
             <List>
-                {['blog', 'contact', 'projects', 'resume', 'admin'].map((text, index) => (
+                {['blog', 'projects', 'resume', 'contact'].map((text, index) => (
                     <NavLink to={'/'+text} className={classes.navLink} key={index}>
                         <ListItem button key={index} className={classes.navLink}>
                             <ListItemText primary={text} className={classes.navText}/>

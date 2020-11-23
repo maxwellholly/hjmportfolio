@@ -1,0 +1,41 @@
+.headerC {
+    margin-top: 50px;
+    margin-bottom: 0;
+    height: 200px;
+    overflow: hidden;
+}
+
+.container {
+    margin-left: 15%;
+    margin-right: auto;
+    width: 80%;
+    height: 570px;
+}
+
+.header {
+    height: 225px;
+}
+
+.blogImg {
+    width: 75%;
+}
+
+.blogPost {
+    padding-bottom: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+h2 {
+    color: #000000
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 570px;
+    }
+
+}

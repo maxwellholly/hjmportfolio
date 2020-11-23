@@ -4,3 +4,78 @@
     height: 100%;
     max-height: 100vh;
 }
+
+.container {
+    background-size: 175px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form {
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+input, textarea {
+    width:65vw !important;
+    margin: 10px;
+}
+
+input, textarea, button {
+    display: inline-block;
+}
+
+.contactB {
+    width: 40%;
+    max-width: 600px;
+    box-sizing: border-box;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    background-color: #000000;
+    color: #EEEEEE;
+    border: none;
+    border-radius: 10px;
+}
+
+.contactB:hover {
+    box-shadow: 0 0 10px rgba(210, 89, 61, 0.80), 0 0 10px -5px #D2593D;
+}
+
+@media (max-width: 600px) {
+    input, textarea {
+        width:70vw !important;
+        margin: 10px;
+    }
+
+}
+
+.contact{
+    background: rgba(0, 0, 0, .3);
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+a {
+    color: #EEEEEE;
+    font-size: 1rem;
+}
+
+.headerC {
+    margin-top: 50px;
+    margin-bottom: 0;
+    height: 200px;
+    overflow: hidden;
+}
+
+.header {
+    height: 225px;
+}

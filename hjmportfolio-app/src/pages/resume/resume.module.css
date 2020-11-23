@@ -1,0 +1,32 @@
+.headerC {
+    margin-top: 50px;
+    margin-bottom: 0;
+    height: 200px;
+    overflow: hidden;
+}
+
+.header {
+    height: 225px;
+}
+
+.resume {
+    background-color: aliceblue;
+    width: 100vw;
+    height: 90vh;
+    padding: 20px;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+.h2 {
+    color: #000000;
+    font-size: 2rem;
+}
+
+.work {
+    font-size: 2rem;
+    text-decoration: underline;
+}

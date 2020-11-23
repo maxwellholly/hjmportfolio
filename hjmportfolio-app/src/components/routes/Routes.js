@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { Route, Switch } from 'react-router-dom';
 import { ProtectedRoute } from './ProtectedRoute';
 
 import Landing from '../../pages/landing/index';
@@ -15,11 +15,11 @@ export default function Routes() {
       <section className="main-content">
         <Switch>
           <Route exact path={'/'} component={Landing} />
-          <Route exact path={'/login'} component={Login} />
+          <Route exact path={'/admin'} component={Login} />
           <Route exact path={'/blog'} component={Blog} />
           <Route exact path={'/resume'} component={Resume} />
           <Route exact path={'/projects'} component={Projects} />
-          <Route exact path={'/blog'} component={Contact} />
+          <Route exact path={'/contact'} component={Contact} />
           <ProtectedRoute exact path={'/editor'} component={Editor} />
         </Switch>
       </section>
