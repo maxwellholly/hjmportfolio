@@ -1,0 +1,54 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify155cea694d8b4-staging-13254-authRole",
+      "UnauthRoleArn": "arn:aws:iam::728047451377:role/amplify-amplify155cea694d8b4-staging-13254-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::728047451377:role/amplify-amplify155cea694d8b4-staging-13254-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-amplify155cea694d8b4-staging-13254-deployment",
+      "UnauthRoleName": "amplify-amplify155cea694d8b4-staging-13254-unauthRole",
+      "StackName": "amplify-amplify155cea694d8b4-staging-13254",
+      "StackId": "arn:aws:cloudformation:us-west-2:728047451377:stack/amplify-amplify155cea694d8b4-staging-13254/8c6dfc70-fc9f-11eb-bb11-06f3e52cc719",
+      "AmplifyAppId": "d3p9ibof189n8o"
+    }
+  },
+  "auth": {
+    "hjmportfolioe0fbe5dd": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "loginMechanism": [
+          "PREFERRED_USERNAME"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/auth/hjmportfolioe0fbe5dd-cloudformation-template.yml",
+        "logicalId": "authhjmportfolioe0fbe5dd"
+      },
+      "lastPushTimeStamp": "2021-08-14T02:00:10.817Z",
+      "output": {
+        "UserPoolId": "us-west-2_1D2DAtoMr",
+        "AppClientIDWeb": "3736osl1cdk2prdgrkreu9b6gt",
+        "AppClientID": "128p6nha7vnbq1jubtepo0ro0t",
+        "IdentityPoolId": "us-west-2:c64024e0-895d-4a64-b350-a75fff96be9b",
+        "UserPoolArn": "arn:aws:cognito-idp:us-west-2:728047451377:userpool/us-west-2_1D2DAtoMr",
+        "IdentityPoolName": "hjmportfolioe0fbe5dd_identitypool_e0fbe5dd__staging",
+        "UserPoolName": "hjmportfolioe0fbe5dd_userpool_e0fbe5dd"
+      },
+      "lastPushDirHash": "udMkTgjYTP4Uso9JSjS6kLLnitA="
+    }
+  }
+}
