@@ -1,0 +1,49 @@
+@import url('http://fonts.cdnfonts.com/css/american-typewriter');
+
+:root {
+    --backgroundColor: #2B2B2B;
+    --off-white: #CADFE3;
+    --primary-1: #E181A0;
+    --primary-2: #A1C9AD;
+    --primary-3: #9AB7CE;
+    --primary-4: #F2DF67;
+    --primary-5: #E99F73;
+    --font: 'American Typewriter', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--off-white);
+    height: 100%;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    margin: 0;
+    padding: 0;
+}
+
+#footerGlow {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+}
+
+.landing {
+    background-color: var(--primary-4);
+    filter: drop-shadow(0 0 10px var(--primary-4));
+}
+
+.resume {
+    background-color: var(--primary-3);
+    filter: drop-shadow(0 0 10px var(--primary-3));
+}
+
+.projects {
+    background-color: var(--primary-5);
+    filter: drop-shadow(0 0 10px var(--primary-5));
+}
+
+.contact {
+    background-color: var(--primary-2);
+    filter: drop-shadow(0 0 10px var(--primary-2));
+}
