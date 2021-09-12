@@ -1,0 +1,39 @@
+.nav {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.navLink {
+    color: var(--off-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'arial', sans-serif;
+    font-size: 1.25em;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 3;
+    justify-content: flex-end;
+}
+
+.navLinkC {
+    height: auto;
+    width: auto;
+    flex-grow: 1;
+    margin: 50px;
+}
+
+.logo {
+    flex-grow: 1;
+    height: 50px;
+    width: auto;
+}
+
+.logoC {
+    margin: 50px 15% 50px 50px;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './routes/Routes';
+import Nav from './components/nav/Nav';
 
 let page;
 if(window.location.pathname === "/" || window.location.pathname === "/landing"){
@@ -17,8 +18,11 @@ if(window.location.pathname === "/" || window.location.pathname === "/landing"){
 export default function App() {
     return (
         <Router>
+            <header>
+                <Nav/>
+            </header>
             <main>
-                <Routes />
+                <Routes/>
             </main>
             <footer>
                 <div id="footerGlow" className={page}/>
