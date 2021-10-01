@@ -1,0 +1,62 @@
+.parent {
+    height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 28px;
+    color: var(--primary-3);
+    position: fixed;
+    margin-top: calc(55% - 40px);
+    right: auto;
+    left: calc(50% - 175px);
+    filter: drop-shadow(0 0 10px var(--primary-3));
+    animation: animated-text2 4s steps(30,end) 1s 1 normal both;
+    animation-delay: 4s;
+    bottom: 50%;
+}
+
+.parent:first-of-type {
+    margin-top: calc(55% - 80px);
+    left: calc(50% - 120px);
+    bottom: calc(50% + 40px);
+    animation: animated-text1 3s steps(30,end) 1s 1 normal both;
+    animation-delay: unset;
+}
+
+.border1 {
+    border-bottom: solid 3px var(--primary-5);
+    position: absolute;
+    right: -7px;
+    width: 25px;
+    animation: animated-cursor 1s steps(30,end) infinite,  disappear 0s ease-in 3.25s;
+    animation-fill-mode: forwards;
+}
+
+.border2 {
+    border-bottom: solid 3px var(--primary-5);
+    position: absolute;
+    right: -7px;
+    width: 25px;
+    animation: animated-cursor 1s steps(30,end) infinite;
+}
+
+@keyframes animated-text1{
+    from{width: 0;}
+    to{width: 305px;}
+}
+
+@keyframes animated-text2{
+    from{width: 0;}
+    to{width: 410px;}
+}
+
+@keyframes animated-cursor{
+    from{border-bottom-color: var(--primary-5);}
+    to{border-bottom-color: transparent;}
+}
+
+@keyframes disappear {
+    to {
+        border-bottom-color: rgba(0,0,0,0);
+    }
+}
