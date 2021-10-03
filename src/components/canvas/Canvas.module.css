@@ -1,4 +1,7 @@
-canvas {
+#canvasWrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     position: absolute;
     z-index: -1;
 }
