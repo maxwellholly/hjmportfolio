@@ -32,6 +32,12 @@ const Canvas = () => {
         let colors = ["#E181A0","#A1C9AD","#9AB7CE","#F2DF67","#E99F73"];
         let velocities = [.1, -.1];
         let bubbles = [];
+        let radius;
+        let color;
+        let x;
+        let y;
+        let dx;
+        let dy;
         let perc;
 
         function Bubble(x, y, dx, dy, radius, color, perc) {
@@ -67,23 +73,31 @@ const Canvas = () => {
         }
 
         for(let i = 0; i < 100; i++) {
-            let radius = Math.floor(Math.random() * (35-15) + 15);
-            let color = colors[Math.floor(Math.random() * colors.length)];
-            let y = (Math.random() * ceiling) * 2;
-            let x = Math.random() * canvas.width;
-            let dx = velocities[Math.floor(Math.random() * velocities.length)];
-            let dy = velocities[Math.floor(Math.random() * velocities.length)];
+            if(window.innerHeight <= 600) {
+                radius = Math.floor(Math.random() * (15-5) + 5);
+            } else {
+                radius = Math.floor(Math.random() * (35-15) + 15);
+            }
+            color = colors[Math.floor(Math.random() * colors.length)];
+            y = (Math.random() * ceiling) * 2;
+            x = Math.random() * canvas.width;
+            dx = velocities[Math.floor(Math.random() * velocities.length)];
+            dy = velocities[Math.floor(Math.random() * velocities.length)];
             perc = 2;
             bubbles.push(new Bubble(x, y, dx, dy, radius, color, perc));
         }
 
         for(let i = 0; i < 400; i++) {
-            let radius = Math.floor(Math.random() * (85-15) + 15);
-            let color = colors[Math.floor(Math.random() * colors.length)];
-            let y = (Math.random() * ceiling);
-            let x = (Math.random() * canvas.width);
-            let dx = velocities[Math.floor(Math.random() * velocities.length)];
-            let dy = velocities[Math.floor(Math.random() * velocities.length)];
+            if(window.innerHeight <= 600) {
+                radius = Math.floor(Math.random() * (55-10) + 10);
+            } else {
+                radius = Math.floor(Math.random() * (85-15) + 15);
+            }
+            color = colors[Math.floor(Math.random() * colors.length)];
+            y = (Math.random() * ceiling);
+            x = (Math.random() * canvas.width);
+            dx = velocities[Math.floor(Math.random() * velocities.length)];
+            dy = velocities[Math.floor(Math.random() * velocities.length)];
             perc = 1;
             bubbles.push(new Bubble(x, y, dx, dy, radius, color, perc));
         }
@@ -103,7 +117,9 @@ const Canvas = () => {
     });
 
     return (
-        <canvas ref={canvasRef}/>
+        <div id={styles.canvasWrapper}>
+            <canvas ref={canvasRef}/>
+        </div>
     );
 };
 
@@ -129,3 +145,4 @@ export default Canvas;
         ctx.arc(center * 1.2, floor-85, 80, 0, Math.PI*2, false);
         ctx.fillStyle = '#F2DF67';
         ctx.fill();*/
+

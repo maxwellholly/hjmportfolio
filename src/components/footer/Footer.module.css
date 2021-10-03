@@ -4,3 +4,9 @@
     width: 100%;
     height: 10px;
 }
+
+@media only screen and (max-device-width: 480px) {
+    #footerGlow {
+        height: 5px;
+    }
+}
