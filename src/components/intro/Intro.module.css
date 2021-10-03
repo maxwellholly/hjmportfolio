@@ -1,5 +1,5 @@
 .parent {
-    height: 40px;
+    height: 50px;
     white-space: nowrap;
     overflow: hidden;
     font-family: 'Source Code Pro', monospace;
@@ -11,7 +11,7 @@
     left: calc(50% - 175px);
     filter: drop-shadow(0 0 10px var(--primary-3));
     animation: animated-text2 4s steps(30,end) 1s 1 normal both;
-    animation-delay: 4s;
+    animation-delay: 3.75s;
     bottom: 50%;
 }
 
@@ -51,26 +51,33 @@
 
 @media only screen and (max-device-width: 480px) {
     .parent {
-        left: calc(50% - 130px);
-        height: 30px;
-        font-size: 20px;
+        font-size: 24px;
+        left: calc(50% - 175px);
         margin-top: calc(50% - 10px);
+        animation: animated-text4 4s steps(30,end) 1s 1 normal both;
+        animation-delay: 4s;
     }
     .parent:first-of-type {
         margin-top: calc(55% - 70px);
-        left: calc(50% - 80px);
+        left: calc(50% - 120px);
         bottom: calc(50% + 40px);
+        animation: animated-text1 3s steps(30,end) 1s 1 normal both;
     }
 }
 
 @keyframes animated-text1{
     from{width: 0;}
-    to{width: 305px;}
+    to{width: 290px;}
 }
 
 @keyframes animated-text2{
     from{width: 0;}
     to{width: 410px;}
+}
+
+@keyframes animated-text4{
+    from{width: 0;}
+    to{width: 350px;}
 }
 
 @keyframes animated-cursor{
