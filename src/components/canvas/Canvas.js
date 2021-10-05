@@ -125,24 +125,3 @@ const Canvas = () => {
 
 export default Canvas;
 
-/*        ctx.beginPath();
-        ctx.arc(center * .95, floor-42.5, 95, 0, Math.PI*2, false);
-        ctx.fillStyle = '#9AB7CE';
-        ctx.fill();
-        ctx.beginPath();
-        ctx.arc(center * 1.15, floor, 45, 0, Math.PI*2, false);
-        ctx.fillStyle = '#E181A0';
-        ctx.fill();
-        ctx.beginPath();
-        ctx.arc(center * .80, floor-125, 75, 0, Math.PI*2, false);
-        ctx.fillStyle = '#A1C9AD';
-        ctx.fill();
-        ctx.beginPath();
-        ctx.arc(center * 1.05, floor-130, 55, 0, Math.PI*2, false);
-        ctx.fillStyle = '#E99F73';
-        ctx.fill();
-        ctx.beginPath();
-        ctx.arc(center * 1.2, floor-85, 80, 0, Math.PI*2, false);
-        ctx.fillStyle = '#F2DF67';
-        ctx.fill();*/
-

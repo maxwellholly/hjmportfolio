@@ -6,8 +6,6 @@ export default class Landing extends Component {
         super(props);
     }
 
-
-
     render() {
         return (
             <section>
