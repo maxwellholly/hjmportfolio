@@ -11,6 +11,11 @@
     --font: 'American Typewriter', sans-serif;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 #wrapper {
     overflow: hidden;
 }
@@ -98,6 +103,15 @@ body {
     right: 20px;
     bottom: 0;
     height: 30px;
+}
+
+@media only screen and (max-device-width: 767px) {
+    .navbar-collapse {
+        position: unset;
+        right: unset;
+        bottom: unset;
+        height: unset;
+    }
 }
 
 button {

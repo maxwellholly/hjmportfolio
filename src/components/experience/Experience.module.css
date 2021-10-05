@@ -1,0 +1,113 @@
+.resumeWrapper {
+
+}
+
+#basicInfo, #education, #work {
+    margin-top: 30px;
+}
+
+b {
+    color: rgba(0,0,0,1);
+    font-size: .75rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.45rem;
+    padding: 0;
+    margin: 0 0 25px;
+}
+
+#basicInfo h2 {
+    border: none;
+}
+
+h2 {
+    border-bottom: 2px solid black;
+    color: rgba(0,0,0,.8);
+    font-size: .85rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: rgba(0,0,0,.6);
+    font-size: .85rem;
+    margin-bottom: 0;
+}
+
+h4 {
+    color: rgba(0,0,0,.4);
+    font-size: .75rem;
+    margin-top: 0;
+}
+
+#work section, #education section {
+    margin-bottom: 25px;
+}
+
+#octhead {
+    position: fixed;
+    z-index: -3;
+    width: 200px;
+    top: 12.5%;
+    left: calc(50% - 100px);
+    right: auto;
+}
+
+#tentaclel, #tentacler {
+    position: fixed;
+    z-index: -1;
+    width: 40px;
+    height: auto;
+    top: 22.5%;
+}
+
+#tentaclel {
+    right: 9%;
+    left: auto;
+}
+
+#tentacler {
+    right: auto;
+    left: 9%;
+}
+
+#resume {
+    position: absolute;
+    color: black;
+    z-index: -2;
+    height: 70%;
+    width: 80%;
+    left: 10%;
+    top: 23.5%;
+    right: auto;
+    background-color: white;
+    overflow-x: scroll;
+    padding: 50px;
+}
+
+@media only screen and (max-device-width: 480px) {
+    #tentaclel {
+        right: 2.5%;
+        left: auto;
+    }
+
+    #tentacler {
+        right: auto;
+        left: 2.5%;
+    }
+
+    #resume {
+        position: absolute;
+        color: black;
+        z-index: -2;
+        height: 70%;
+        width: 90%;
+        left: 5%;
+        top: 25%;
+        right: auto;
+        background-color: white;
+        overflow-x: scroll;
+        padding: 30px;
+    }
+}
