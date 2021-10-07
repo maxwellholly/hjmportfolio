@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/email",
+      "lambdaFunction": "emailMe",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/email"
+    }
+  ],
+  "resourceName": "emailAPI",
+  "apiName": "emailAPI",
+  "functionArns": [
+    {
+      "lambdaFunction": "emailMe"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-amplify155cea694d8b4-staging-13254-authRole",
+    "unAuthRoleName": "amplify-amplify155cea694d8b4-staging-13254-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "emailMe",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

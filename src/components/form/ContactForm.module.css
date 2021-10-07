@@ -1,0 +1,25 @@
+.contactForm {
+    width: 60%;
+    height: auto;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formGroup {
+    margin-top: 5%;
+}
+
+.formButton {
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .contactForm {
+        width: 90%;
+        height: auto;
+    }
+}
