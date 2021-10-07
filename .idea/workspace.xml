@@ -20,16 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2449f2a-122d-4d51-b799-94dfeb872b57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/experience/Experience.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/experience/Experience.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form/ContactForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form/ContactForm.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/Canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/Canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/Canvas.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/Canvas.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/intro/Intro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/intro/Intro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/intro/Intro.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/intro/Intro.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/landing/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/landing/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/resume/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/resume/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/amplify-meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/amplify-meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/backend-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/backend-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/amplify-meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/amplify-meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/awscloudformation/nested-cloudformation-stack.yml" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/awscloudformation/nested-cloudformation-stack.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/nested-cloudformation-stack.yml" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/awscloudformation/nested-cloudformation-stack.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/backend-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/backend-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/team-provider-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/team-provider-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aws-exports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aws-exports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +52,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
     </key>
@@ -100,6 +106,22 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="910" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1630544600193" />
+    <state width="796" height="264" key="GridCell.Tab.0.bottom" timestamp="1633609070390">
+      <screen x="0" y="23" width="1680" height="981" />
+    </state>
+    <state width="796" height="264" key="GridCell.Tab.0.bottom/0.23.1680.981@0.23.1680.981" timestamp="1633609070390" />
+    <state width="796" height="264" key="GridCell.Tab.0.center" timestamp="1633609070389">
+      <screen x="0" y="23" width="1680" height="981" />
+    </state>
+    <state width="796" height="264" key="GridCell.Tab.0.center/0.23.1680.981@0.23.1680.981" timestamp="1633609070389" />
+    <state width="796" height="264" key="GridCell.Tab.0.left" timestamp="1633609070389">
+      <screen x="0" y="23" width="1680" height="981" />
+    </state>
+    <state width="796" height="264" key="GridCell.Tab.0.left/0.23.1680.981@0.23.1680.981" timestamp="1633609070389" />
+    <state width="796" height="264" key="GridCell.Tab.0.right" timestamp="1633609070390">
+      <screen x="0" y="23" width="1680" height="981" />
+    </state>
+    <state width="796" height="264" key="GridCell.Tab.0.right/0.23.1680.981@0.23.1680.981" timestamp="1633609070390" />
     <state x="797" y="275" key="IDE.errors.dialog" timestamp="1631400626703">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -112,9 +134,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="832" y="142" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1633234433083" />
-    <state x="874" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1631404373669">
+    <state x="874" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1633607960089">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="874" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1631404373669" />
+    <state x="874" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1633607960089" />
   </component>
 </project>

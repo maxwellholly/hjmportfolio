@@ -128,6 +128,38 @@
         }
       }
     },
+    "functionemailMe": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/function/emailMe-cloudformation-template.json",
+        "Parameters": {
+          "deploymentBucketName": "amplify-amplify155cea694d8b4-staging-13254-deployment",
+          "s3Key": "amplify-builds/emailMe-376f42694f584436636b-build.zip",
+          "env": "staging"
+        }
+      }
+    },
+    "apiemailAPI": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/api/emailAPI-cloudformation-template.json",
+        "Parameters": {
+          "functionemailMeName": {
+            "Fn::GetAtt": [
+              "functionemailMe",
+              "Outputs.Name"
+            ]
+          },
+          "functionemailMeArn": {
+            "Fn::GetAtt": [
+              "functionemailMe",
+              "Outputs.Arn"
+            ]
+          },
+          "env": "staging"
+        }
+      }
+    },
     "UpdateRolesWithIDPFunction": {
       "DependsOn": [
         "AuthRole",

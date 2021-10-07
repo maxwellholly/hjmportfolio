@@ -15,7 +15,7 @@ export default function App() {
                     <Nav/>
                 </header>
                 <main>
-                    <Routes/>
+                    <Routes />
                 </main>
                 <Footer/>
             </div>

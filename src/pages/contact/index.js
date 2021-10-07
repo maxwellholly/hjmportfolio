@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ContactForm from "../../components/form/ContactForm";
 
 export default class Contact extends Component {
     constructor(props) {
@@ -7,7 +8,9 @@ export default class Contact extends Component {
 
     render() {
         return (
-            <h1>Contact</h1>
+            <section className="contactWrapper">
+                <ContactForm />
+            </section>
         )
     }
 }
