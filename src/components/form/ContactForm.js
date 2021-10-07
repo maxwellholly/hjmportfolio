@@ -34,7 +34,7 @@ class ContactForm extends Component {
         const{ email, subject, text } = this.state;
         const myInit = { body: {email, subject, text} };
         API
-            .post('emailAPI', '/email', myInit)
+            .post('emailAPI', '/emailMe-staging', myInit)
             .then(response => {
                 console.log(response);
             })
