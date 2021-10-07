@@ -21,7 +21,14 @@ const awsmobile = {
     "aws_cognito_password_protection_settings": {
         "passwordPolicyMinLength": 8,
         "passwordPolicyCharacters": []
-    }
+    },
+    "aws_cloud_logic_custom": [
+        {
+            "name": "emailAPI",
+            "endpoint": "https://iiu7vypmil.execute-api.us-west-2.amazonaws.com/staging",
+            "region": "us-west-2"
+        }
+    ]
 };
 
 
