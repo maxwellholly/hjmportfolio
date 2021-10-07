@@ -38,7 +38,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/auth/hjmportfolioe0fbe5dd-cloudformation-template.yml",
         "logicalId": "authhjmportfolioe0fbe5dd"
       },
-      "lastPushTimeStamp": "2021-10-07T13:00:44.315Z",
+      "lastPushTimeStamp": "2021-10-07T14:43:29.038Z",
       "output": {
         "UserPoolId": "us-west-2_1D2DAtoMr",
         "AppClientIDWeb": "3736osl1cdk2prdgrkreu9b6gt",
@@ -68,7 +68,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/function/emailMe-cloudformation-template.json",
         "logicalId": "functionemailMe"
       },
-      "lastPushTimeStamp": "2021-10-07T13:00:44.329Z",
+      "lastPushTimeStamp": "2021-10-07T14:43:29.040Z",
       "output": {
         "Region": "us-west-2",
         "Arn": "arn:aws:lambda:us-west-2:728047451377:function:emailMe-staging",
@@ -96,7 +96,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/api/emailAPI-cloudformation-template.json",
         "logicalId": "apiemailAPI"
       },
-      "lastPushTimeStamp": "2021-10-07T13:00:44.329Z",
+      "lastPushTimeStamp": "2021-10-07T14:43:29.042Z",
       "output": {
         "ApiName": "emailAPI",
         "RootUrl": "https://iiu7vypmil.execute-api.us-west-2.amazonaws.com/staging",

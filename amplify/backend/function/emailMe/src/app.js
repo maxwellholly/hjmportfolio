@@ -23,15 +23,14 @@ app.use(function(req, res, next) {
   next()
 });
 
-app.post('/email', function(req, res) {
-  const { email, subject, content } = req.body;
-  console.log('ghost');
+app.post('/emailMe-staging', function(req, res) {
+  const { email, subject, text } = req.body;
 
   let mail = {
     from: email,
     to: "Holly Maxwell",
-    message: subject,
-    text: content
+    subject: subject,
+    text: text
   }
 
   const transporter = nodemailer.createTransport({
@@ -43,6 +42,14 @@ app.post('/email', function(req, res) {
       pass: "BrownBear33"
     }
   });
+/*
+  transporter.verify(function(error, success) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Server is ready to take emails!");
+    }
+  });*/
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
