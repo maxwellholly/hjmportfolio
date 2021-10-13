@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Carousel from '../../components/carousel/Carousel';
 
 export default class Projects extends Component {
     constructor(props) {
@@ -7,7 +8,7 @@ export default class Projects extends Component {
 
     render() {
         return (
-            <h1>Projects</h1>
+            <Carousel/>
         )
     }
 }
