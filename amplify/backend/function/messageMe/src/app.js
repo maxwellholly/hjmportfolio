@@ -8,8 +8,8 @@ See the License for the specific language governing permissions and limitations 
 
 var express = require('express')
 var bodyParser = require('body-parser')
+var nodemailer = require('nodemailer')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
-var nodemailer = require('nodemailer');
 
 // declare a new express app
 var app = express()
@@ -23,46 +23,28 @@ app.use(function(req, res, next) {
   next()
 });
 
-app.post('/emailMe-staging', function(req, res) {
-  const { email, subject, text } = req.body;
+app.post('/message', function(req, res) {
+    const transporter = nodemailer.createTransport({
+        protocol: "SMTPS",
+        port: 465,
+        secure: true,
+        auth: {
+            username: "contact",
+            password: "BrownBear33",
+        },
+        host: "smtp.mail.us-west-2.awsapps.com"
+    })
+    transporter.verify(function(error, succes) {
+        if(error) {
+            console.log(error)
+        } else {
+            res.json({success: 'post call succeeded!', url: req.url, body: req.body})
+        }
+    })
+});
 
-  let mail = {
-    from: email,
-    to: "Holly Maxwell",
-    subject: subject,
-    text: text
-  }
-
-  const transporter = nodemailer.createTransport({
-    host: "smtp.mail.us-west-2.awsapps.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: "contact@hollymaxwell.me",
-      pass: "BrownBear33"
-    }
-  });
-/*
-  transporter.verify(function(error, success) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Server is ready to take emails!");
-    }
-  });*/
-
-  transporter.sendMail(mail, (err, data) => {
-    if (err) {
-      res.json({
-        status: 'fail'
-      })
-    } else {
-      res.json({
-        status: 'success'
-      })
-    }
-  })
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
+app.listen(3000, function() {
+    console.log("App started")
 });
 
 // Export the app object. When executing the application local this does nothing. However,
