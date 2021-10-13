@@ -18,36 +18,27 @@ app.use(awsServerlessExpressMiddleware.eventContext())
 
 // Enable CORS for all methods
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*")
-    res.header("Access-Control-Allow-Headers", "*")
-    next()
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header("Access-Control-Allow-Headers", "*")
+  next()
 });
 
-app.get('/', function(req, res){
-    const { email, subject, text } = req.apiGateway.event;
-    console.log(req.apiGateway.event.from);
-    const content = {
-        from: "contact@hollymaxwell.me",
-        to: "contact@hollymaxwell.me",
-        subject: "Portfolio contact from " + email + "",
-        text: "Subject: " + subject + " Message: " + text + ""
-    }
-
+app.post('/message', function(req, res) {
     const transporter = nodemailer.createTransport({
+        protocol: "SMTPS",
         port: 465,
         secure: true,
         auth: {
-            user: process.env.USER,
-            pass: process.env.PASS,
+            username: "contact",
+            password: "BrownBear33",
         },
         host: "smtp.mail.us-west-2.awsapps.com"
     })
-    transporter.sendMail(content, function(err, info) {
-        if(err){
-            res.json({errorMessage: err, error: 'Unable to send message!'})
+    transporter.verify(function(error, succes) {
+        if(error) {
+            console.log(error)
         } else {
-            res.json({success: 'Message sent!', info})
-            console.log('Message sent: ' + info.response)
+            res.json({success: 'post call succeeded!', url: req.url, body: req.body})
         }
     })
 });

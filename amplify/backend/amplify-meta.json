@@ -30,7 +30,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/function/messageMe-cloudformation-template.json",
         "logicalId": "functionmessageMe"
       },
-      "lastPushTimeStamp": "2021-10-12T02:54:48.474Z",
+      "lastPushTimeStamp": "2021-10-13T01:57:54.368Z",
       "output": {
         "Region": "us-west-2",
         "Arn": "arn:aws:lambda:us-west-2:728047451377:function:messageMe-staging",
@@ -58,7 +58,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/api/messageAPI-cloudformation-template.json",
         "logicalId": "apimessageAPI"
       },
-      "lastPushTimeStamp": "2021-10-12T02:54:48.475Z",
+      "lastPushTimeStamp": "2021-10-13T01:57:54.370Z",
       "output": {
         "ApiName": "messageAPI",
         "RootUrl": "https://a0hi86j1l9.execute-api.us-west-2.amazonaws.com/staging",
