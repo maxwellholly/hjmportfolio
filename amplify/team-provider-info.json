@@ -12,13 +12,10 @@
       "AmplifyAppId": "d3p9ibof189n8o"
     },
     "categories": {
-      "auth": {
-        "hjmportfolioe0fbe5dd": {}
-      },
       "function": {
-        "emailMe": {
+        "messageMe": {
           "deploymentBucketName": "amplify-amplify155cea694d8b4-staging-13254-deployment",
-          "s3Key": "amplify-builds/emailMe-376f42694f584436636b-build.zip"
+          "s3Key": "amplify-builds/messageMe-6c43776d6e6c36466a4f-build.zip"
         }
       }
     }

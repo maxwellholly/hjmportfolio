@@ -8,15 +8,15 @@
         },
     
     
-          "functionemailMeName": {
+          "functionmessageMeName": {
             "Type": "String",
-            "Default": "functionemailMeName"
+            "Default": "functionmessageMeName"
           },
 
           
-          "functionemailMeArn": {
+          "functionmessageMeArn": {
             "Type": "String",
-            "Default": "functionemailMeArn"
+            "Default": "functionmessageMeArn"
           }
 
           
@@ -37,16 +37,16 @@
         
         
         
-      "emailAPI": {
+      "messageAPI": {
         "Type": "AWS::ApiGateway::RestApi",
         "Properties": {
           "Description": "",
-          "Name": "emailAPI",
+          "Name": "messageAPI",
           "Body": {
             "swagger": "2.0",
             "info": {
               "version": "2018-05-24T17:52:00Z",
-              "title": "emailAPI"
+              "title": "messageAPI"
             },
             "host": {
                 "Fn::Join": [
@@ -82,7 +82,7 @@
             ],
             "paths": {
               
-              "/email": {
+              "/message": {
                 "options": {
                   "consumes": [
                     "application/json"
@@ -168,7 +168,7 @@
                             
                             {
 
-                                "Ref": "functionemailMeArn"
+                                "Ref": "functionmessageMeArn"
                             },
                             
                             "/invocations"
@@ -181,7 +181,7 @@
                   }
                 }
               },
-              "/email/{proxy+}": {
+              "/message/{proxy+}": {
                 "options": {
                   "consumes": [
                     "application/json"
@@ -267,7 +267,7 @@
                           
                           {
 
-                            "Ref": "functionemailMeArn"
+                            "Ref": "functionmessageMeArn"
                           },
                           
                           "/invocations"
@@ -324,12 +324,12 @@
       
         
 
-        "functionemailMePermissionemailAPI": {
+        "functionmessageMePermissionmessageAPI": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
                 "FunctionName": 
                     {
-                        "Ref":  "functionemailMeName"
+                        "Ref":  "functionmessageMeName"
                     },
                     
                     "Action": "lambda:InvokeFunction",
@@ -348,7 +348,7 @@
                             },
                             ":",
                             {
-                                "Ref": "emailAPI"
+                                "Ref": "messageAPI"
                             },
                             "/*/*/*"
                         ]
@@ -359,7 +359,7 @@
         
         
 
-      "DeploymentAPIGWemailAPI": {
+      "DeploymentAPIGWmessageAPI": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",
@@ -373,7 +373,7 @@
             ]
           },
           "RestApiId": {
-            "Ref": "emailAPI"
+            "Ref": "messageAPI"
           }
         }
       }
@@ -381,15 +381,15 @@
     "Outputs": {
         "RootUrl": {
             "Description": "Root URL of the API gateway",
-            "Value": {"Fn::Join": ["", ["https://", {"Ref": "emailAPI"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
+            "Value": {"Fn::Join": ["", ["https://", {"Ref": "messageAPI"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
         },
         "ApiName": {
           "Description": "API Friendly name",
-          "Value": "emailAPI"
+          "Value": "messageAPI"
         },
         "ApiId": {
           "Description": "API ID (prefix of API URL)",
-          "Value": {"Ref": "emailAPI"}
+          "Value": {"Ref": "messageAPI"}
         }
     }
   }

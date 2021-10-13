@@ -32,19 +32,30 @@ class ContactForm extends Component {
     handleSubmit = async (e) => {
         e.preventDefault();
         const{ email, subject, text } = this.state;
-        const myInit = { body: {email, subject, text} };
+        const myInit = {body: {email, subject, text}};
         API
-            .post('emailAPI', '/emailMe-staging', myInit)
+            .post('messageAPI', '/message', myInit)
             .then(response => {
                 console.log(response);
+                this.setState({
+                    email: null,
+                    subject: null,
+                    text: null,
+                    errorMessage: null,
+                    successMessage: "Message sent, thank you!"
+                })
+                e.target.reset();
             })
             .catch(error => {
-                console.log(error.response);
+                console.log(error);
+                this.setState({
+                    errorMessage: "Unable to send message!"
+                })
             });
     }
     render() {
         return (
-            <Form method="POST" action="send" enctype="multipart/form-data" onSubmit={this.handleSubmit} className={styles.contactForm}>
+            <Form method="POST" onSubmit={this.handleSubmit} className={styles.contactForm}>
                 <FormGroup className={styles.formGroup}>
                     <Label for="email">Email</Label>
                     <Input type="email" name="email" id="email" placeholder="Your Email" onChange={this.handleInput}/>
@@ -57,7 +68,7 @@ class ContactForm extends Component {
                     <Label for="text">Message</Label>
                     <Input type="textarea" name="text" id="text" onChange={this.handleInput}/>
                 </FormGroup>
-                <Button type="submit" value="submit" className={styles.formButton}>Submit</Button>
+                <Button type="submit" value="send" className={styles.formButton}>Submit</Button>
             </Form>
         );
     }

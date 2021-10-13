@@ -12,80 +12,42 @@
       "AmplifyAppId": "d3p9ibof189n8o"
     }
   },
-  "auth": {
-    "hjmportfolioe0fbe5dd": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false,
-      "frontendAuthConfig": {
-        "loginMechanism": [
-          "PREFERRED_USERNAME"
-        ],
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": []
-        },
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ]
-      },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/auth/hjmportfolioe0fbe5dd-cloudformation-template.yml",
-        "logicalId": "authhjmportfolioe0fbe5dd"
-      },
-      "lastPushTimeStamp": "2021-10-07T14:43:29.038Z",
-      "output": {
-        "UserPoolId": "us-west-2_1D2DAtoMr",
-        "AppClientIDWeb": "3736osl1cdk2prdgrkreu9b6gt",
-        "AppClientID": "128p6nha7vnbq1jubtepo0ro0t",
-        "IdentityPoolId": "us-west-2:c64024e0-895d-4a64-b350-a75fff96be9b",
-        "UserPoolArn": "arn:aws:cognito-idp:us-west-2:728047451377:userpool/us-west-2_1D2DAtoMr",
-        "IdentityPoolName": "hjmportfolioe0fbe5dd_identitypool_e0fbe5dd__staging",
-        "UserPoolName": "hjmportfolioe0fbe5dd_userpool_e0fbe5dd"
-      },
-      "lastPushDirHash": "udMkTgjYTP4Uso9JSjS6kLLnitA="
-    }
-  },
+  "auth": {},
   "function": {
-    "emailMe": {
+    "messageMe": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2021-10-07T12:59:04.988Z",
+      "lastBuildTimeStamp": "2021-10-11T19:23:21.717Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2021-10-07T12:59:05.752Z",
-      "distZipFilename": "emailMe-376f42694f584436636b-build.zip",
+      "lastPackageTimeStamp": "2021-10-11T19:23:22.351Z",
+      "distZipFilename": "messageMe-6c43776d6e6c36466a4f-build.zip",
       "s3Bucket": {
         "deploymentBucketName": "amplify-amplify155cea694d8b4-staging-13254-deployment",
-        "s3Key": "amplify-builds/emailMe-376f42694f584436636b-build.zip"
+        "s3Key": "amplify-builds/messageMe-6c43776d6e6c36466a4f-build.zip"
       },
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/function/emailMe-cloudformation-template.json",
-        "logicalId": "functionemailMe"
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/function/messageMe-cloudformation-template.json",
+        "logicalId": "functionmessageMe"
       },
-      "lastPushTimeStamp": "2021-10-07T14:43:29.040Z",
+      "lastPushTimeStamp": "2021-10-12T02:54:48.474Z",
       "output": {
         "Region": "us-west-2",
-        "Arn": "arn:aws:lambda:us-west-2:728047451377:function:emailMe-staging",
-        "Name": "emailMe-staging",
-        "LambdaExecutionRole": "hjmportfolioLambdaRole4cebb5fa-staging"
+        "Arn": "arn:aws:lambda:us-west-2:728047451377:function:messageMe-staging",
+        "Name": "messageMe-staging",
+        "LambdaExecutionRole": "hjmportfolioLambdaRole3320eb25-staging"
       },
-      "lastPushDirHash": "wRNbPHT/Ws1yA7UeThAkIv+mTt4="
+      "lastPushDirHash": "BxDzKu51F7orCNsO82guLrVNpok="
     }
   },
   "api": {
-    "emailAPI": {
+    "messageAPI": {
       "service": "API Gateway",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "emailMe",
+          "resourceName": "messageMe",
           "attributes": [
             "Name",
             "Arn"
@@ -93,16 +55,16 @@
         }
       ],
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/api/emailAPI-cloudformation-template.json",
-        "logicalId": "apiemailAPI"
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify155cea694d8b4-staging-13254-deployment/amplify-cfn-templates/api/messageAPI-cloudformation-template.json",
+        "logicalId": "apimessageAPI"
       },
-      "lastPushTimeStamp": "2021-10-07T14:43:29.042Z",
+      "lastPushTimeStamp": "2021-10-12T02:54:48.475Z",
       "output": {
-        "ApiName": "emailAPI",
-        "RootUrl": "https://iiu7vypmil.execute-api.us-west-2.amazonaws.com/staging",
-        "ApiId": "iiu7vypmil"
+        "ApiName": "messageAPI",
+        "RootUrl": "https://a0hi86j1l9.execute-api.us-west-2.amazonaws.com/staging",
+        "ApiId": "a0hi86j1l9"
       },
-      "lastPushDirHash": "XvUKW7jZ/0HdJo+3q86QLWx8GxQ="
+      "lastPushDirHash": "+EARl3brmvq+M1uPRDleFOARMJE="
     }
   }
 }
