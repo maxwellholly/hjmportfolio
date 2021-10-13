@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "emailMe",
+            "messageMe",
             {
               "Fn::Join": [
                 "",
                 [
-                  "emailMe",
+                  "messageMe",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "hjmportfolioLambdaRole4cebb5fa",
+            "hjmportfolioLambdaRole3320eb25",
             {
               "Fn::Join": [
                 "",
                 [
-                  "hjmportfolioLambdaRole4cebb5fa",
+                  "hjmportfolioLambdaRole3320eb25",
                   "-",
                   {
                     "Ref": "env"

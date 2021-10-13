@@ -1,19 +1,19 @@
 {
   "paths": [
     {
-      "name": "/email",
-      "lambdaFunction": "emailMe",
+      "name": "/message",
+      "lambdaFunction": "messageMe",
       "privacy": {
         "open": true
       },
-      "policyResourceName": "/email"
+      "policyResourceName": "/message"
     }
   ],
-  "resourceName": "emailAPI",
-  "apiName": "emailAPI",
+  "resourceName": "messageAPI",
+  "apiName": "messageAPI",
   "functionArns": [
     {
-      "lambdaFunction": "emailMe"
+      "lambdaFunction": "messageMe"
     }
   ],
   "privacy": {
@@ -25,7 +25,7 @@
   "dependsOn": [
     {
       "category": "function",
-      "resourceName": "emailMe",
+      "resourceName": "messageMe",
       "attributes": [
         "Name",
         "Arn"
