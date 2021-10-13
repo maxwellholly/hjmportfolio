@@ -7,20 +7,19 @@
     color: var(--primary-3);
     position: fixed;
     margin-top: calc(55% - 40px);
-    right: auto;
-    left: calc(50% - 175px);
-    filter: drop-shadow(0 0 10px var(--primary-3));
-    animation: animated-text2 4s steps(30,end) 1s 1 normal both;
-    animation-delay: 3.75s;
+    right: calc(50% - 200px);
+    left: auto;
     bottom: 50%;
+    animation: animated-text2 3s steps(30,end) 1s 1 normal both;
+    animation-delay: 3.75s;
 }
 
 .parent:first-of-type {
     margin-top: calc(55% - 80px);
-    left: calc(50% - 120px);
+    right: calc(50% - 145px);
     bottom: calc(50% + 40px);
     animation: animated-text1 3s steps(30,end) 1s 1 normal both;
-    animation-delay: unset;
+    animation-delay: 0s;
 }
 
 .emph {
@@ -37,7 +36,7 @@
     position: absolute;
     right: -7px;
     width: 25px;
-    animation: animated-cursor 1s steps(30,end) infinite,  disappear 0s ease-in 3.25s;
+    animation: animated-cursor 1s steps(30,end) infinite,  disappear 0s 3.25s;
     animation-fill-mode: forwards;
 }
 
@@ -52,16 +51,18 @@
 @media only screen and (max-device-width: 480px) {
     .parent {
         font-size: 24px;
-        left: calc(50% - 175px);
+        right: calc(50% - 175px);
         margin-top: calc(50% - 10px);
         animation: animated-text4 4s steps(30,end) 1s 1 normal both;
-        animation-delay: 4s;
+        animation-delay: 3.75s;
     }
     .parent:first-of-type {
         margin-top: calc(55% - 70px);
-        left: calc(50% - 120px);
+        left: auto;
+        right: calc(50% - 145px);
         bottom: calc(50% + 40px);
-        animation: animated-text1 3s steps(30,end) 1s 1 normal both;
+        animation: animated-text1 4s steps(30,end) 1s 1 normal both;
+        animation-delay: 0s;
     }
 }
 
@@ -77,7 +78,7 @@
 
 @keyframes animated-text4{
     from{width: 0;}
-    to{width: 350px;}
+    to{width: 355px;}
 }
 
 @keyframes animated-cursor{
