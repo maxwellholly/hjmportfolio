@@ -1,0 +1,83 @@
+.item {
+    height: 70%;
+    width: 100%;
+}
+
+.cardImg {
+    height: 100%;
+}
+
+.link {
+    width: 100%;
+    margin: auto;
+}
+
+#octhead {
+    position: fixed;
+    z-index: -3;
+    width: 200px;
+    top: 12.5%;
+    left: calc(50% - 100px);
+    right: auto;
+}
+
+#tentaclel2, #tentacler2 {
+    position: fixed;
+    z-index: -1;
+    width: 40px;
+    height: auto;
+    top: 22.5%;
+}
+
+#tentaclel2 {
+    right: 9%;
+    left: auto;
+}
+
+#tentacler2 {
+    right: auto;
+    left: 9%;
+}
+
+@media only screen and (max-device-width: 480px) {
+    #tentaclel2 {
+        right: 2.5%;
+        left: auto;
+    }
+
+    #tentacler2 {
+        right: auto;
+        left: 2.5%;
+    }
+}
+
+.carWrap {
+    margin-top: 100px;
+}
+
+.projH1 {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.projH3 {
+    text-align: center;
+    color: red;
+    margin-bottom: 25px;
+}
+
+.projH3::before {
+    content: "";
+    display: block;
+    background: url("https://hjmportfolio.s3.us-west-2.amazonaws.com/1608733-20.png") no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0;
+}
+
+.warning {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
