@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2449f2a-122d-4d51-b799-94dfeb872b57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/carousel/Carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/carousel/Carousel.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/projects/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/carousel/Carousel.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel/Carousel.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +70,9 @@
       <workItem from="1629264360729" duration="2686000" />
       <workItem from="1630547501157" duration="3539000" />
       <workItem from="1630801418736" duration="3227000" />
+      <workItem from="1634755879104" duration="4021000" />
+      <workItem from="1636481432858" duration="425000" />
+      <workItem from="1637358477111" duration="14246000" />
     </task>
     <servers />
   </component>
@@ -125,10 +128,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.0.1680.1050@0.0.1680.1050" timestamp="1631404373684" />
-    <state x="832" y="142" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1633234433083">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="832" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1637365288273">
+      <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state x="832" y="142" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1633234433083" />
+    <state x="832" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.980@0.23.1680.980" timestamp="1637365288273" />
+    <state x="832" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.981@0.23.1680.981" timestamp="1637359244119" />
     <state x="874" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1633607960089">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
