@@ -100,7 +100,7 @@ body {
 .nav-link {
     display: flex;
     justify-content: center;
-    color: rgba(250,250,250,0.6);
+    color: rgba(80,76,73,.8);
 }
 
 .nav-link:hover {
@@ -115,7 +115,9 @@ body {
 }
 
 .navbar-nav {
-    background-color: #9AB7CE;
+    padding: 10px 20px;
+    height: 75px;
+    right: 0;
 }
 
 @media only screen and (max-device-width: 767px) {
