@@ -114,6 +114,10 @@ body {
     height: 30px;
 }
 
+.navbar-nav {
+    background-color: #9AB7CE;
+}
+
 @media only screen and (max-device-width: 767px) {
     .navbar-collapse {
         position: unset;
