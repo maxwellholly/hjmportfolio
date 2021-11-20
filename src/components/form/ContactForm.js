@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Alert } from 'reactstrap';
 import styles from './ContactForm.module.css';
 import Amplify, { API } from 'aws-amplify';
 import awsconfig from '../../aws-exports';
@@ -12,7 +12,8 @@ class ContactForm extends Component {
         this.state = {
             email: "",
             subject: "",
-            text: ""
+            text: "",
+            visibility: 'hidden'
         }
 
         this.handleInput = this.handleInput.bind(this);
@@ -33,6 +34,7 @@ class ContactForm extends Component {
         e.preventDefault();
         const{ email, subject, text } = this.state;
         const myInit = {body: {email, subject, text}};
+
         API
             .post('messageAPI', '/message', myInit)
             .then(response => {
@@ -42,32 +44,37 @@ class ContactForm extends Component {
                     subject: null,
                     text: null,
                     errorMessage: null,
-                    successMessage: "Message sent, thank you!"
+                    message: "Message sent, thank you!",
+                    visibility: 'visible'
                 })
                 e.target.reset();
             })
             .catch(error => {
                 console.log(error);
                 this.setState({
-                    errorMessage: "Unable to send message!"
+                    message: "Unable to send message!",
+                    visibility: 'visible'
                 })
             });
     }
+
     render() {
-        return (
+            return (
             <Form method="POST" onSubmit={this.handleSubmit} className={styles.contactForm}>
+                <h1 style={{color: 'black'}}>Contact Holly</h1>
                 <FormGroup className={styles.formGroup}>
-                    <Label for="email">Email</Label>
+                    <Label for="email" style={{color: 'black'}}>Email</Label>
                     <Input type="email" name="email" id="email" placeholder="Your Email" onChange={this.handleInput}/>
                 </FormGroup>
                 <FormGroup className={styles.formGroup}>
-                    <Label for="subject">Subject</Label>
+                    <Label for="subject" style={{color: 'black'}}>Subject</Label>
                     <Input type="text" name="subject" id="subject" placeholder="Subject" onChange={this.handleInput}/>
                 </FormGroup>
                 <FormGroup className={styles.formGroup}>
-                    <Label for="text">Message</Label>
+                    <Label for="text" style={{color: 'black'}}>Message</Label>
                     <Input type="textarea" name="text" id="text" onChange={this.handleInput}/>
                 </FormGroup>
+                <Alert style={{marginTop: 20,visibility: this.state.visibility}}>{this.state.message}</Alert>
                 <Button type="submit" value="send" className={styles.formButton}>Submit</Button>
             </Form>
         );
