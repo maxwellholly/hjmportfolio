@@ -32,30 +32,43 @@ class ContactForm extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        const{ email, subject, text } = this.state;
-        const myInit = {body: {email, subject, text}};
+        if(this.state.email !== null && this.state.email !== "" && this.state.subject !== null && this.state.subject !== "" && this.state.text !== null && this.state.text !== "") {
+            const{ email, subject, text } = this.state;
+            const myInit = {body: {email, subject, text}};
 
-        API
-            .post('messageAPI', '/message', myInit)
-            .then(response => {
-                console.log(response);
-                this.setState({
-                    email: null,
-                    subject: null,
-                    text: null,
-                    errorMessage: null,
-                    message: "Message sent, thank you!",
-                    visibility: 'visible'
+            API
+                .post('messageAPI', '/message', myInit)
+                .then(response => {
+                    console.log(response);
+                    this.setState({
+                        email: null,
+                        subject: null,
+                        text: null,
+                        errorMessage: null,
+                        message: "Message sent, thank you!",
+                        visibility: 'visible',
+                        color: 'lightgreen',
+                        font: 'green'
+                    })
+                    e.target.reset();
                 })
-                e.target.reset();
+                .catch(error => {
+                    console.log(error);
+                    this.setState({
+                        message: "Unable to send message!",
+                        visibility: 'visible',
+                        color: 'pink',
+                        font: 'red'
+                    })
+                });
+        } else {
+            this.setState({
+                message: "Unable to send message!",
+                visibility: 'visible',
+                color: 'pink',
+                font: 'red'
             })
-            .catch(error => {
-                console.log(error);
-                this.setState({
-                    message: "Unable to send message!",
-                    visibility: 'visible'
-                })
-            });
+        }
     }
 
     render() {
@@ -72,10 +85,10 @@ class ContactForm extends Component {
                 </FormGroup>
                 <FormGroup className={styles.formGroup}>
                     <Label for="text" style={{color: 'black'}}>Message</Label>
-                    <Input type="textarea" name="text" id="text" onChange={this.handleInput}/>
+                    <Input type="textarea" name="text" id="text" rows="5" onChange={this.handleInput}/>
                 </FormGroup>
-                <Alert style={{marginTop: 20,visibility: this.state.visibility}}>{this.state.message}</Alert>
-                <Button type="submit" value="send" className={styles.formButton}>Submit</Button>
+                <Alert style={{marginTop: 20,visibility: this.state.visibility, backgroundColor: this.state.color, color: this.state.font}}>{this.state.message}</Alert>
+                <Button type="submit" value="send" className={styles.formButton}>Send</Button>
             </Form>
         );
     }

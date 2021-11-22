@@ -2,24 +2,26 @@
     height: 50px;
     white-space: nowrap;
     overflow: hidden;
-    font-family: 'Source Code Pro', monospace;
     font-size: 28px;
     color: var(--primary-3);
-    position: fixed;
-    margin-top: calc(55% - 40px);
-    right: calc(50% - 200px);
-    left: auto;
-    bottom: 50%;
+    margin-top: 0;
     animation: animated-text2 3s steps(30,end) 1s 1 normal both;
-    animation-delay: 3.75s;
+    animation-delay: 2s;
+    margin-bottom: 0;
 }
 
 .parent:first-of-type {
-    margin-top: calc(55% - 80px);
-    right: calc(50% - 145px);
-    bottom: calc(50% + 40px);
     animation: animated-text1 3s steps(30,end) 1s 1 normal both;
     animation-delay: 0s;
+    margin-top: 80%;
+    margin-bottom: 0;
+}
+
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    width: 40%;
+    align-items: center;
 }
 
 .emph {
@@ -30,37 +32,19 @@
     color: var(--primary-2);
 }
 
-.border1 {
-    border-bottom: solid 3px var(--primary-5);
-    border-image-slice: 1;
-    position: absolute;
-    right: -7px;
-    width: 25px;
-    animation: animated-cursor 1s steps(30,end) infinite,  disappear 0s 3.25s;
-    animation-fill-mode: forwards;
-}
-
-.border2 {
-    border-bottom: solid 3px var(--primary-5);
-    position: absolute;
-    right: -7px;
-    width: 25px;
-    animation: animated-cursor 1s steps(30,end) infinite;
-}
-
 @media only screen and (max-device-width: 480px) {
     .parent {
         font-size: 24px;
-        right: calc(50% - 175px);
-        margin-top: calc(50% - 10px);
+        margin-left: auto;
+        margin-right: auto;
+/*        right: calc(50% - 175px);*/
+        margin-top: 0;
         animation: animated-text4 4s steps(30,end) 1s 1 normal both;
         animation-delay: 3.75s;
     }
     .parent:first-of-type {
         margin-top: calc(55% - 70px);
-        left: auto;
-        right: calc(50% - 145px);
-        bottom: calc(50% + 40px);
+        margin-bottom: 0;
         animation: animated-text1 4s steps(30,end) 1s 1 normal both;
         animation-delay: 0s;
     }
@@ -68,26 +52,15 @@
 
 @keyframes animated-text1{
     from{width: 0;}
-    to{width: 290px;}
+    to{width: 250px;}
 }
 
 @keyframes animated-text2{
     from{width: 0;}
-    to{width: 410px;}
+    to{width: 350px;}
 }
 
 @keyframes animated-text4{
     from{width: 0;}
     to{width: 355px;}
-}
-
-@keyframes animated-cursor{
-    from{border-bottom-color: var(--primary-5);}
-    to{border-bottom-color: transparent;}
-}
-
-@keyframes disappear {
-    to {
-        border-bottom-color: rgba(0,0,0,0);
-    }
 }

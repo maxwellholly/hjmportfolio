@@ -6,7 +6,7 @@ const Experience = () => {
         <div className={styles.resumeWrapper}>
             <div id={styles.tentaclel}><img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/tentaclel.png" alt="left tentacle"/></div>
             <div id={styles.tentacler}><img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/tentacler.png" alt="left tentacle"/></div>
-            <div id={styles.resume}>
+            <div className={styles.resume}>
                 <section id={styles.basicInfo}>
                     <h1>Holly Maxwell</h1>
                     <h2><b>Email </b>contact@hollymaxwell.me | <b>Ph </b>425-314-6709</h2>

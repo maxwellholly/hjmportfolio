@@ -91,7 +91,7 @@ function ProjectCarousel() {
             </div >
             <div id={styles.octhead}><img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/octhead.svg" alt="octopus head"/></div>
         </div>*/
-        <div>
+        <div className={styles.wrapper}>
             <h1 className={styles.projH1}>UX Design Projects</h1>
             <div className={styles.warning}>
                 <h3 className={styles.projH3}> This section is undergoing an update, but please explore what is here!</h3>
