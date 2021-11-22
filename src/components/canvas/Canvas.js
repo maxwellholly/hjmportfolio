@@ -69,7 +69,7 @@ const Canvas = () => {
                 + ", "
                 + Math.round(Math.random()*255)
                 + ", "
-                + Math.floor(Math.random() * (255 - 100) + 100)
+                + Math.floor(Math.random() * (255 - 50) + 50)
                 + ", "
                 + alpha + ")";
             waves.push(new Wave(bY, color));

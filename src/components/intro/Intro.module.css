@@ -4,24 +4,21 @@
     overflow: hidden;
     font-size: 28px;
     color: var(--primary-3);
-    margin-top: 0;
-    animation: animated-text2 3s steps(30,end) 1s 1 normal both;
+    animation: animated-text1 3s steps(30,end) 1s 1 normal both;
     animation-delay: 2s;
-    margin-bottom: 0;
+    width: auto;
+    margin: 0 auto;
 }
 
 .parent:first-of-type {
     animation: animated-text1 3s steps(30,end) 1s 1 normal both;
     animation-delay: 0s;
-    margin-top: 80%;
-    margin-bottom: 0;
+    margin-top: 40%;
+    width: auto;
 }
 
 .wrapper {
-    margin-right: auto;
-    margin-left: auto;
-    width: 40%;
-    align-items: center;
+
 }
 
 .emph {
@@ -32,18 +29,18 @@
     color: var(--primary-2);
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (min-device-width: 480px) {
     .parent {
         font-size: 24px;
         margin-left: auto;
         margin-right: auto;
-/*        right: calc(50% - 175px);*/
         margin-top: 0;
-        animation: animated-text4 4s steps(30,end) 1s 1 normal both;
+        margin-bottom: 50%;
+        animation: animated-text1 4s steps(30,end) 1s 1 normal both;
         animation-delay: 3.75s;
     }
     .parent:first-of-type {
-        margin-top: calc(55% - 70px);
+        margin-top: 20%;
         margin-bottom: 0;
         animation: animated-text1 4s steps(30,end) 1s 1 normal both;
         animation-delay: 0s;
@@ -52,15 +49,5 @@
 
 @keyframes animated-text1{
     from{width: 0;}
-    to{width: 250px;}
-}
-
-@keyframes animated-text2{
-    from{width: 0;}
-    to{width: 350px;}
-}
-
-@keyframes animated-text4{
-    from{width: 0;}
-    to{width: 355px;}
+    to{width: 60%;}
 }
