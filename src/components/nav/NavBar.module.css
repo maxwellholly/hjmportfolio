@@ -9,21 +9,17 @@
 .navItem {
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1em;
+    margin-right: 10px;
 }
 
 .navItem:last-of-type {
     padding-bottom: 15px;
 }
 
-.navItem:hover {
-    transition: transform 125ms;
-    transform: scale(1.15);
-}
-
 .logo {
     flex-grow: 1;
-    height: 50px;
+    height: 60px;
     width: auto;
 }
 
@@ -50,27 +46,33 @@
 
 .logoC {
     margin-top: 10px;
-    margin-right: 15%;
     margin-left: 20px;
     margin-bottom: 10px;
+
+/*    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    animation:slidebg 5s linear infinite;*/
+}
+
+.logoL::before {
+    visibility: hidden;
 }
 
 .toggler {
-    width: 40px;
-    height: 25px;
-    margin-right: 20px;
-    background-image: url("https://hjmportfolio.s3.us-west-2.amazonaws.com/hamburger.png");
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+    background-image: url("https://hjmportfolio.s3.us-west-2.amazonaws.com/menu.svg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-@media only screen and (max-device-width: 480px) {
-    .logo {
-        height: 30px;
-    }
+.nav {
+    padding-right: 30px;
+}
 
+@media only screen and (max-device-width: 480px) {
     .nav {
-        border-bottom: 5px solid transparent;
+        padding-right: 25px;
     }
 
     .logoC {
@@ -78,7 +80,6 @@
     }
 
     .navItem {
-        width: 100%;
         font-size: 1em;
     }
 }

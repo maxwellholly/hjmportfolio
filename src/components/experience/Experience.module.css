@@ -68,7 +68,7 @@ h4 {
     left: 9%;
 }
 
-#resume {
+.resume {
     overflow-x: scroll;
     position: absolute;
     color: black;
