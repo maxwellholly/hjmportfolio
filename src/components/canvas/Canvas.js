@@ -28,19 +28,55 @@ const Canvas = () => {
         let ratio = getPixelRatio(ctx);
         ctx.canvas.width = dimensions.height * ratio;
         ctx.canvas.height = dimensions.height * ratio;
-        let ceiling = (dimensions.height / 6);
-        let colors = ["#E181A0","#A1C9AD","#9AB7CE","#F2DF67","#E99F73"];
-        let velocities = [.1, -.1];
-        let bubbles = [];
-        let radius;
-        let color;
-        let x;
-        let y;
-        let dx;
-        let dy;
-        let perc;
+        let waves = [];
+        let gap = 15;
+        let glY = 0;
+        let bY = dimensions.height * .6;
+        let alpha = 0.1;
 
-        function Bubble(x, y, dx, dy, radius, color, perc) {
+
+        function Wave( y, color ){
+            this.force = 0;
+            this.wavePower = 80;
+            this.count = y;
+            this.y = y + glY;
+
+            this.draw = function(){
+                ctx.beginPath();
+                ctx.moveTo(0, this.y);
+                ctx.quadraticCurveTo(canvas.width, this.y + ( this.wavePower * this.force ), canvas.width, this.y);
+                ctx.quadraticCurveTo(canvas.width * .75, this.y - ( this.wavePower * this.force ), canvas.width, this.y);
+                ctx.lineTo(canvas.width, dimensions.height);
+                ctx.lineTo(0, canvas.height);
+                ctx.lineTo(0, this.y);
+                ctx.closePath();
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+
+            this.update = function(){
+                this.y = this.y + glY;
+                this.force = Math.sin(this.count);
+                this.count += 0.02;
+
+                this.draw();
+            }
+        }
+
+        for(let i = 0; i < 10; i++) {
+            let color = "rgba("
+                + Math.round(Math.random()*255)
+                + ", "
+                + Math.round(Math.random()*255)
+                + ", "
+                + Math.floor(Math.random() * (255 - 100) + 100)
+                + ", "
+                + alpha + ")";
+            waves.push(new Wave(bY, color));
+            bY += gap;
+        }
+
+/*        function Bubble(x, y, dx, dy, radius, color, perc) {
             this.x = x;
             this.y = y;
             this.dx = dx;
@@ -60,7 +96,7 @@ const Canvas = () => {
                     this.dx = -this.dx;
                 }
 
-                if (this.y > (ceiling * perc) || this.y < 0) {
+                if (this.y >= (dimensions.height) || this.y < (dimensions.height + (dimensions.height / 4))) {
                     this.dy = -this.dy;
                 }
 
@@ -70,17 +106,17 @@ const Canvas = () => {
                 this.draw();
             }
 
-        }
+        }*/
 
-        for(let i = 0; i < 100; i++) {
+/*        for(let i = 0; i < 100; i++) {
             if(window.innerHeight <= 600) {
                 radius = Math.floor(Math.random() * (15-5) + 5);
             } else {
                 radius = Math.floor(Math.random() * (35-15) + 15);
             }
             color = colors[Math.floor(Math.random() * colors.length)];
-            y = (Math.random() * ceiling) * 2;
             x = Math.random() * canvas.width;
+            y = Math.floor(Math.random() * (dimensions.height - (dimensions.height + (dimensions.height / 4))) + dimensions.height);
             dx = velocities[Math.floor(Math.random() * velocities.length)];
             dy = velocities[Math.floor(Math.random() * velocities.length)];
             perc = 2;
@@ -94,20 +130,20 @@ const Canvas = () => {
                 radius = Math.floor(Math.random() * (85-15) + 15);
             }
             color = colors[Math.floor(Math.random() * colors.length)];
-            y = (Math.random() * ceiling);
+            y = Math.floor(Math.random() * (dimensions.height - (dimensions.height + (dimensions.height / 7))) + dimensions.height);
             x = (Math.random() * canvas.width);
             dx = velocities[Math.floor(Math.random() * velocities.length)];
             dy = velocities[Math.floor(Math.random() * velocities.length)];
             perc = 1;
             bubbles.push(new Bubble(x, y, dx, dy, radius, color, perc));
-        }
+        }*/
 
         const animate = () => {
             requestAnimationFrame(animate);
             ctx.clearRect(0,0, ctx.canvas.width, ctx.canvas.height);
 
-            for(let i = 0; i < bubbles.length; i++) {
-                bubbles[i].update();
+            for(let i = 0; i < waves.length; i++) {
+                waves[i].update();
             }
 
         };

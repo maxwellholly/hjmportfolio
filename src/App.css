@@ -1,7 +1,6 @@
 @import url('http://fonts.cdnfonts.com/css/american-typewriter');
 
 :root {
-    /*--backgroundColor: #2B2B2B;*/
     --backgroundColor: #ffffff;
     --off-white: #f1f3f3;
     --primary-1: #E181A0;
@@ -9,8 +8,7 @@
     --primary-3: #9AB7CE;
     --primary-4: #F2DF67;
     --primary-5: #E99F73;
-    --font: 'American Typewriter', sans-serif;
-    height: 100vh;
+    --font: omnes-pro sans-serif 400 normal;
 }
 
 main {
@@ -98,26 +96,41 @@ body {
 }
 
 .nav-link {
+    position: relative;
     display: flex;
     justify-content: center;
     color: rgba(80,76,73,.8);
+    padding: 0 !important;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
 }
 
 .nav-link:hover {
-    color: rgba(250,250,250,1);
+    color: rgba(0,0,0,1);
 }
 
 .navbar-collapse {
-    position: absolute;
-    right: 20px;
-    bottom: 0;
-    height: 30px;
+    justify-content: left;
 }
 
 .navbar-nav {
     padding: 10px 20px;
-    height: 75px;
-    right: 0;
+    height: 25px;
 }
 
 @media only screen and (max-device-width: 767px) {
@@ -127,6 +140,15 @@ body {
         bottom: unset;
         height: unset;
     }
+    .nav-link {
+        justify-content: right;
+    }
+    .navbar-nav {
+         padding: 0;
+    }
+    .nav-link::before {
+        visibility: hidden;
+    }
 }
 
 button {
@@ -135,6 +157,12 @@ button {
 
 .navbar-toggler {
     border: none;
+    transition: transform 1s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    transform: rotate(45deg);
 }
 
 .carousel-control-prev, .carousel-control-next {

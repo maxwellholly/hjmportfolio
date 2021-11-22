@@ -56,8 +56,7 @@
 }
 
 .projH1 {
-    margin-top: 50px;
-    margin-bottom: 100px;
+    color: black;
 }
 
 .projH3 {
@@ -80,4 +79,8 @@
     width: 400px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.wrapper {
+    margin-top: 10%;
 }
