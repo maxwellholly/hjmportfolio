@@ -43,7 +43,7 @@ const NavBar = () => {
                             <NavLink href="/contact">Contact</NavLink>
                         </NavItem>
                         <NavItem className={styles.navItem}>
-                            <NavLink href="/">Blog</NavLink>
+                            <NavLink href="/blog">Blog</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>
