@@ -17,6 +17,7 @@ export default function App() {
                 <main>
                     <Routes />
                 </main>
+                <Footer/>
             </div>
         </Router>
     );
