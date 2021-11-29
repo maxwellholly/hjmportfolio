@@ -6,7 +6,7 @@
     --primary-1: #E181A0;
     --primary-2: #A1C9AD;
     --primary-3: #9AB7CE;
-    --primary-4: #F2DF67;
+    --primary-4: #f2df67;
     --primary-5: #E99F73;
     --font: omnes-pro sans-serif 400 normal;
 }
@@ -30,16 +30,16 @@ img {
 #oct {
     position: fixed;
     height: auto;
-    width: 500px;
-    bottom: 10%;
+    width: 400px;
+    top: 55%;
     right: auto;
-    left: calc(50% - 250px);
+    left: calc(50% - 200px);
 }
 
 @media only screen and (max-device-width: 480px) {
     #oct {
-        width: 90%;
-        left: 5%;
+        width: 70%;
+        left: 15%;
     }
 }
 
@@ -134,22 +134,19 @@ body {
 }
 
 @media only screen and (max-device-width: 767px) {
-    .navbar-collapse {
-        position: unset;
-        right: unset;
-        bottom: unset;
-        height: unset;
+    .navbar-nav {
+        position: absolute;
+        right: 0;
+        z-index: 10;
+        padding: 0 10px 0 0;
     }
+
     .nav-link {
         justify-content: right;
     }
-    .navbar-collapse {
-        justify-content: right;
-    }
-    .navbar-nav {
-         padding: 0;
-    }
+
     .nav-link::before {
+        content: none;
         visibility: hidden;
     }
 }
