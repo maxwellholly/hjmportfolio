@@ -13,12 +13,12 @@ main {
     height: 100%;
 }
 
-img {
+/*img {
     width: 100%;
     height: auto;
     margin-right: auto !important;
     margin-left: auto !important;
-}
+}*/
 
 #wrapper {
     height: 100vh;
@@ -148,6 +148,12 @@ body {
         content: none;
         visibility: hidden;
     }
+
+    .navbar-collapse {
+        transition: transform 1s ease;
+        align-items: end;
+        justify-content: right;
+    }
 }
 
 button {
@@ -161,60 +167,8 @@ button {
 
 .navbar-toggler:focus {
     box-shadow: none;
-    transform: rotate(45deg);
-}
-
-.carousel-control-prev, .carousel-control-next {
-    color: #E181A0;
-    transition: all .2s ease-in-out;
-}
-
-.carousel-control-next {
-    right: -15%;
-}
-
-.carousel-control-prev {
-    left: -10%;
-}
-
-.carousel-control-prev:hover, .carousel-control-next:hover {
-    transform: scale(1.1);
 }
 
 .sr-only {
     visibility: hidden;
-}
-
-.carousel-control-next-icon {
-    background-image: url('https://hjmportfolio.s3.us-west-2.amazonaws.com/next.svg');
-    width: 4rem;
-    height: 4rem;
-}
-
-.carousel-control-prev-icon {
-    background-image: url('https://hjmportfolio.s3.us-west-2.amazonaws.com/prev.svg');
-    width: 4rem;
-    height: 4rem;
-}
-
-.slide {
-    width: 80%;
-    height: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 100px;
-}
-
-.carousel-inner {
-    height: 100%;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.carousel-item {
-    height: auto;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 1000px;
 }
