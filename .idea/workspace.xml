@@ -20,15 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2449f2a-122d-4d51-b799-94dfeb872b57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/posts/Posts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/posts/Posts.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/blog/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel/Carousel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/carousel/Carousel.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel/Carousel.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/experience/Experience.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/experience/Experience.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/experience/Experience.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/experience/Experience.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +79,7 @@
       <workItem from="1630801418736" duration="3227000" />
       <workItem from="1634755879104" duration="4021000" />
       <workItem from="1636481432858" duration="425000" />
-      <workItem from="1637358477111" duration="75205000" />
+      <workItem from="1637358477111" duration="79998000" />
     </task>
     <servers />
   </component>

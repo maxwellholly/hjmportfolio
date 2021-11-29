@@ -1,12 +1,12 @@
-.wrapper {
-    top: 55%;
-}
-
 .parent {
+    display: block;
+    text-align: center;
     height: 50px;
+    width: auto;
     font-size: 2rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
     color: black;
     font-family: felt-tip-senior,sans-serif;
     font-weight: 400;
@@ -14,8 +14,7 @@
 }
 
 .parent:first-of-type {
-    margin-bottom: 0;
-    margin-top: 250px;
+    margin-top: 225px;
 }
 
 .emph {
@@ -40,7 +39,7 @@
         background-color: rgba(239, 244, 146, .5);
     }
     .parent:first-of-type {
-        margin-top: 175px;
+        margin-top: 225px;
     }
 }
 
