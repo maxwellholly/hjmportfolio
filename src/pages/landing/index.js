@@ -11,7 +11,7 @@ export default class Landing extends Component {
             <section>
                 <Intro/>
                 <div id="oct">
-                    <img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/new/oct.svg" alt="Octopus"/>
+                    <img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/oct2.svg" alt="Octopus"/>
                 </div>
             </section>
         )
