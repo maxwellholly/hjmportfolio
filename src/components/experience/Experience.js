@@ -4,12 +4,15 @@ import styles from './Experience.module.css';
 const Experience = () => {
     return (
         <div className={styles.resumeWrapper}>
-            <div id={styles.tentaclel}><img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/tentaclel.png" alt="left tentacle"/></div>
-            <div id={styles.tentacler}><img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/tentacler.png" alt="left tentacle"/></div>
+{/*            <div id={styles.tentaclel}><img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/tentaclel.png" alt="left tentacle"/></div>
+            <div id={styles.tentacler}><img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/tentacler.png" alt="left tentacle"/></div>*/}
             <div className={styles.resume}>
-                <section id={styles.basicInfo}>
+                <a href="https://hjmportfolio.s3.us-west-2.amazonaws.com/resume2.pdf" target="_blank" download>
+                    <img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/resume2.svg" alt="resume"/>
+                </a>
+                {/*<section id={styles.basicInfo}>
                     <h1>Holly Maxwell</h1>
-                    <h2><b>Email </b>contact@hollymaxwell.me | <b>Ph </b>425-314-6709</h2>
+                    <h2><b>Email </b>contact@hollymaxwell.me | <br/><b>Ph </b>425-314-6709</h2>
                     <h4>Western Washington</h4>
                     <h3>Full stack developer with many years of varied experience. Seeking to leverage my skills and make a positive impact with a company that is in the same pursuit.</h3>
                 </section>
@@ -21,14 +24,12 @@ const Experience = () => {
                         <h3>Bachelor of Science</h3>
                         <h4>Salutatorian</h4>
                         <h3>Web Design and Development</h3>
-                        <h4>February 2018 to November 2020</h4>
                     </section>
                     <section>
                         <h3>ITT Tecnical Institute</h3>
                         <h4>Everett, WA</h4>
                         <h3>Associate of Applied Science</h3>
                         <h3>Computer Aided Drafting & Design</h3>
-                        <h4>September 2008 to December 2010</h4>
                     </section>
                 </section>
                 <section id={styles.work}>
@@ -70,9 +71,9 @@ const Experience = () => {
                         <h3>Delivered same day package orders for Amazon</h3>
                         <h4>April 2018 to April 2019</h4>
                     </section>
-                </section>
+                </section>*/}
             </div>
-            <div id={styles.octhead}><img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/octhead.svg" alt="octopus head"/></div>
+{/*            <div id={styles.octhead}><img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/octhead.svg" alt="octopus head"/></div>*/}
         </div>
     );
 };

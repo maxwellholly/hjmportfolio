@@ -12,43 +12,8 @@
     margin: auto;
 }
 
-#octhead {
-    position: fixed;
-    z-index: -3;
-    width: 200px;
-    top: 12.5%;
-    left: calc(50% - 100px);
-    right: auto;
-}
-
-#tentaclel2, #tentacler2 {
-    position: fixed;
-    z-index: -1;
-    width: 40px;
-    height: auto;
-    top: 22.5%;
-}
-
-#tentaclel2 {
-    right: 9%;
-    left: auto;
-}
-
-#tentacler2 {
-    right: auto;
-    left: 9%;
-}
-
 @media only screen and (max-device-width: 480px) {
-    #tentaclel2 {
-        right: 2.5%;
-        left: auto;
-    }
 
-    #tentacler2 {
-        right: auto;
-        left: 2.5%;
-    }
 }
 
 .carWrap {
@@ -82,5 +47,7 @@
 }
 
 .wrapper {
+    position: relative;
     margin-top: 10%;
+    height: 20%;
 }

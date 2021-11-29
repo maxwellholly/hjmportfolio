@@ -2,26 +2,14 @@ import React, { useEffect } from 'react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
-    const [location, setLocation] = React.useState({
-        location: window.location.pathname
-    });
-    let page;
-    if(location.location === '/') {
-        page = 'landing';
-    } else {
-        page = location.location.replace('/', '');
-    }
-    function updatePage() {
-        setLocation({
-            location: window.location.pathname
-        })
-    }
-    useEffect(()=> {
-
-    });
     return (
         <footer>
-            <div id={styles.footerGlow} className={page}/>
+            <a className={styles.footerLink} href="https://github.com/maxwellholly">
+                <img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/GitHub-Mark-32px.png" alt="Github Logo"/>
+            </a>
+            <a className={styles.footerLink} href="https://www.linkedin.com/in/haxwellmolly/">
+                <img src="https://hjmportfolio.s3.us-west-2.amazonaws.com/linkedInLogo.png" alt="LinkedIn Logo"/>
+            </a>
         </footer>
     );
 };
