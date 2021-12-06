@@ -29,8 +29,8 @@ app.post('/message', function(req, res) {
         port: 465,
         secure: true,
         auth: {
-            username: "contact",
-            password: "BrownBear33",
+            username: process.env.USER,
+            password: process.env.PASSWORD,
         },
         host: "smtp.mail.us-west-2.awsapps.com"
     })
@@ -47,7 +47,4 @@ app.listen(3000, function() {
     console.log("App started")
 });
 
-// Export the app object. When executing the application local this does nothing. However,
-// to port it to AWS Lambda we will create a wrapper around that will load the app from
-// this file
 module.exports = app
