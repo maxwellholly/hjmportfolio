@@ -23,14 +23,14 @@ main {
     width: 400px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 @media only screen and (max-device-width: 480px) {
     #oct {
-        width: 70%;
-        left: 15%;
-        margin-top: 50px;
+        width: 80%;
+        left: 10%;
+        margin-top: 60px;
     }
 }
 
@@ -90,7 +90,8 @@ body {
     position: relative;
     display: flex;
     color: rgba(80,76,73,.8);
-    padding: 0 !important;
+    padding: 0;
+    margin-left: 10px;
 }
 
 .nav-link::before {
@@ -116,21 +117,29 @@ body {
 
 .navbar-nav {
     padding: 10px 20px;
+    margin-top: auto;
     height: 25px;
 }
 
-@media only screen and (max-device-width: 767px) {
+@media (max-width: 768px) {
     .navbar-nav {
         position: absolute;
         z-index: 10;
-        padding: 0 10px 0 0;
         width: 100%;
         height: auto;
         background-color: white;
+        padding: 0;
+        margin-left: 0;
     }
 
     .nav-link {
         justify-content: right;
+        padding: 0;
+        margin-left: 0;
+    }
+
+    .nav-expand-md {
+        padding: 0;
     }
 }
 
