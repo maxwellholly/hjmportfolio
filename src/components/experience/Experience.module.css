@@ -5,7 +5,7 @@
     width: 70%;
     margin-right: 15%;
     margin-left: auto;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .resume img {
@@ -37,7 +37,7 @@
 
 @media only screen and (max-device-width: 480px) {
     .resume {
-        margin-top: 10%;
+        margin-top: 5%;
         width: 90%;
         margin-right: 5%;
         padding: 0;
