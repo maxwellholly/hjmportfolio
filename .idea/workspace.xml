@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2449f2a-122d-4d51-b799-94dfeb872b57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/function/messageMe/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/function/messageMe/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/NavBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/NavBar.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +41,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
@@ -73,7 +75,7 @@
       <workItem from="1634755879104" duration="4021000" />
       <workItem from="1636481432858" duration="425000" />
       <workItem from="1637358477111" duration="81184000" />
-      <workItem from="1638763373805" duration="2288000" />
+      <workItem from="1638763373805" duration="4090000" />
     </task>
     <servers />
   </component>
@@ -93,10 +95,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="902" y="334" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1631231482431">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="902" y="336" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1638776197625">
+      <screen x="0" y="23" width="1680" height="984" />
     </state>
     <state x="902" y="334" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1631231482431" />
+    <state x="902" y="336" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.984@0.23.1680.984" timestamp="1638776197625" />
     <state x="910" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1630544600193">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

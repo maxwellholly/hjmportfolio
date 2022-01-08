@@ -42,9 +42,6 @@ const NavBar = () => {
                         <NavItem className={styles.navItem}>
                             <NavLink href="/contact">Contact</NavLink>
                         </NavItem>
-                        <NavItem className={styles.navItem}>
-                            <NavLink href="/blog">Blog</NavLink>
-                        </NavItem>
                     </Nav>
                 </Collapse>
             </Navbar>
