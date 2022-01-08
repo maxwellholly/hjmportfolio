@@ -5,7 +5,6 @@ import Landing from '../pages/landing';
 import Resume from '../pages/resume';
 import Projects from '../pages/projects';
 import Contact from '../pages/contact';
-import Blog from '../pages/blog';
 
 export default function Routes(props) {
     return (
