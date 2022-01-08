@@ -26,11 +26,11 @@ main {
     margin-top: 80px;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media (max-width: 480px) {
     #oct {
         width: 80%;
         left: 10%;
-        margin-top: 60px;
+        margin-top: 7%;
     }
 }
 
