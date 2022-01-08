@@ -14,7 +14,6 @@ export default function Routes(props) {
             <Route exact path={'/resume'} component={Resume} />
             <Route exact path={'/projects'} component={Projects} />
             <Route exact path={'/contact'} component={Contact} api={props.api}/>
-            <Route exact path={'/blog'} component={Blog} />
         </Switch>
     );
 }
