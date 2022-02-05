@@ -13,7 +13,7 @@ class ContactForm extends Component {
             email: "",
             subject: "",
             text: "",
-            visibility: 'hidden'
+            display: 'none'
         }
 
         this.handleInput = this.handleInput.bind(this);
@@ -46,7 +46,7 @@ class ContactForm extends Component {
                         text: null,
                         errorMessage: null,
                         message: "Message sent, thank you!",
-                        visibility: 'visible',
+                        display: 'block',
                         color: 'lightgreen',
                         font: 'green'
                     })
@@ -56,7 +56,7 @@ class ContactForm extends Component {
                     console.log(error);
                     this.setState({
                         message: "Unable to send message!",
-                        visibility: 'visible',
+                        display: 'block',
                         color: 'pink',
                         font: 'red'
                     })
@@ -64,7 +64,7 @@ class ContactForm extends Component {
         } else {
             this.setState({
                 message: "Unable to send message!",
-                visibility: 'visible',
+                display: 'block',
                 color: 'pink',
                 font: 'red'
             })
@@ -74,7 +74,6 @@ class ContactForm extends Component {
     render() {
             return (
             <Form method="POST" onSubmit={this.handleSubmit} className={styles.contactForm}>
-                <h1 style={{color: 'black'}}>Contact Holly</h1>
                 <FormGroup className={styles.formGroup}>
                     <Label for="email" style={{color: 'black'}}>Email</Label>
                     <Input type="email" name="email" id="email" placeholder="Your Email" onChange={this.handleInput}/>
@@ -87,8 +86,8 @@ class ContactForm extends Component {
                     <Label for="text" style={{color: 'black'}}>Message</Label>
                     <Input type="textarea" name="text" id="text" rows="5" onChange={this.handleInput}/>
                 </FormGroup>
-                <Alert style={{marginTop: 20,visibility: this.state.visibility, backgroundColor: this.state.color, color: this.state.font}}>{this.state.message}</Alert>
                 <Button type="submit" value="send" className={styles.formButton}>Send</Button>
+                <Alert style={{marginTop: 20,display: this.state.display, backgroundColor: this.state.color, color: this.state.font}}>{this.state.message}</Alert>
             </Form>
         );
     }
