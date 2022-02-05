@@ -1,17 +1,18 @@
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 768px) {
     .contactForm {
-        width: 90%;
+        width: 90% !important;
         height: auto;
         margin-top: 20%;
     }
 
     .formButton {
-        width: 60%;
+        width: 60% !important;
+        margin-left: 20% !important;
     }
 }
 
 .contactForm {
-    width: 40%;
+    width: 60%;
     height: auto;
     margin-top: 10%;
     margin-left: auto;
@@ -23,9 +24,9 @@
 }
 
 .formButton {
-    width: 40%;
+    width: 50%;
     margin-top: 5%;
-    margin-left: 30%;
+    margin-left: 25%;
     background-color: rgba(80,76,73,.6);
     border: none;
 }
