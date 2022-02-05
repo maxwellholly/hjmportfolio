@@ -45,6 +45,12 @@
     .resume {
         width: 90%;
         padding: 0;
+        margin-top: 75px;
+    }
+
+    .resume img {
+        width: 100%;
+        height: auto;
     }
 
     .resume a::after {
