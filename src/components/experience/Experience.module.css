@@ -1,29 +1,35 @@
+.resumeWrapper {
+    text-align: center;
+}
+
 .resume {
     position: relative;
-    max-height: 700px;
+    display: inline-block;
+    max-height: 600px;
     height: auto;
-    width: 70%;
-    margin-right: 15%;
+    width: auto;
+    margin-right: auto;
     margin-left: auto;
-    margin-top: 5%;
+    margin-top: 50px;
 }
 
 .resume img {
     position: relative;
-    max-height: 700px;
+    max-height: 600px;
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    width: 100%;
+    width: auto;
 }
 
 .resume a::after {
-    content:"\A";
-    width:100%;
+    content: "\A";
+    max-height: 600px;
+    width: 100%;
     height:100%;
-    position:absolute;
-    top:0;
-    left:0;
+    position: absolute;
+    top: 0;
+    left: 0;
     background: rgba(0, 0, 0, .6) url("https://hjmportfolio.s3.us-west-2.amazonaws.com/1814119_launch_open_share_icon.svg") no-repeat center;
     background-size: 112px;
     opacity: 0;
@@ -37,9 +43,7 @@
 
 @media only screen and (max-device-width: 480px) {
     .resume {
-        margin-top: 5%;
         width: 90%;
-        margin-right: 5%;
         padding: 0;
     }
 
