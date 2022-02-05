@@ -2,19 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './Carousel.module.css';
 
-import {
-    CarouselControl,
-    Carousel,
-    CarouselItem,
-    CarouselIndicators,
-} from 'reactstrap';
-
-function ProjectCarousel() {
+function Carousel() {
     return (
         <div className={styles.wrapper}>
-            <div className={styles.warning}>
-                <h3 className={styles.projH3}> This section is undergoing an update, but please check back soon!</h3>
-            </div>
 {/*            <div className={styles.projects}>
                 <h1 className={styles.projH1}>UX Design Projects</h1>
                 <div className="d-flex flex-row flex-nowrap overflow-auto">
@@ -48,4 +38,4 @@ function ProjectCarousel() {
     );
 }
 
-export default ProjectCarousel;
+export default Carousel;
