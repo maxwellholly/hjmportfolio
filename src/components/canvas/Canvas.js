@@ -26,7 +26,7 @@ const Canvas = () => {
         let canvas = canvasRef.current;
         let ctx = canvas.getContext('2d');
         let ratio = getPixelRatio(ctx);
-        ctx.canvas.width = dimensions.height * ratio;
+        ctx.canvas.width = (dimensions.width * ratio) * 2;
         ctx.canvas.height = dimensions.height * ratio;
         let waves = [];
         let gap = 15;
@@ -75,68 +75,6 @@ const Canvas = () => {
             waves.push(new Wave(bY, color));
             bY += gap;
         }
-
-/*        function Bubble(x, y, dx, dy, radius, color, perc) {
-            this.x = x;
-            this.y = y;
-            this.dx = dx;
-            this.dy = dy;
-            this.radius = radius;
-            this.color = color;
-
-            this.draw = function() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
-                ctx.fillStyle = this.color;
-                ctx.fill();
-            }
-
-            this.update = function() {
-                if (this.x > dimensions.width || this.x < 0) {
-                    this.dx = -this.dx;
-                }
-
-                if (this.y >= (dimensions.height) || this.y < (dimensions.height + (dimensions.height / 4))) {
-                    this.dy = -this.dy;
-                }
-
-                this.x+=this.dx;
-                this.y+=this.dy;
-
-                this.draw();
-            }
-
-        }*/
-
-/*        for(let i = 0; i < 100; i++) {
-            if(window.innerHeight <= 600) {
-                radius = Math.floor(Math.random() * (15-5) + 5);
-            } else {
-                radius = Math.floor(Math.random() * (35-15) + 15);
-            }
-            color = colors[Math.floor(Math.random() * colors.length)];
-            x = Math.random() * canvas.width;
-            y = Math.floor(Math.random() * (dimensions.height - (dimensions.height + (dimensions.height / 4))) + dimensions.height);
-            dx = velocities[Math.floor(Math.random() * velocities.length)];
-            dy = velocities[Math.floor(Math.random() * velocities.length)];
-            perc = 2;
-            bubbles.push(new Bubble(x, y, dx, dy, radius, color, perc));
-        }
-
-        for(let i = 0; i < 400; i++) {
-            if(window.innerHeight <= 600) {
-                radius = Math.floor(Math.random() * (55-10) + 10);
-            } else {
-                radius = Math.floor(Math.random() * (85-15) + 15);
-            }
-            color = colors[Math.floor(Math.random() * colors.length)];
-            y = Math.floor(Math.random() * (dimensions.height - (dimensions.height + (dimensions.height / 7))) + dimensions.height);
-            x = (Math.random() * canvas.width);
-            dx = velocities[Math.floor(Math.random() * velocities.length)];
-            dy = velocities[Math.floor(Math.random() * velocities.length)];
-            perc = 1;
-            bubbles.push(new Bubble(x, y, dx, dy, radius, color, perc));
-        }*/
 
         const animate = () => {
             requestAnimationFrame(animate);
