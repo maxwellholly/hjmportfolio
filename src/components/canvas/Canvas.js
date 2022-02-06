@@ -3,7 +3,7 @@ import styles from './Canvas.module.css';
 
 const Canvas = () => {
     const [dimensions] = React.useState({
-        height: window.innerHeight,
+        height: window.outerHeight,
         width: window.innerWidth
     });
 
