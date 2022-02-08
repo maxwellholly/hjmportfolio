@@ -141,6 +141,15 @@ body {
     .nav-expand-md {
         padding: 0;
     }
+
+    .card-img-top {
+        height: 100%;
+    }
+
+    .card {
+        height: 35% !important;
+        width: 100%;
+    }
 }
 
 button {
@@ -158,4 +167,27 @@ button {
 
 .sr-only {
     visibility: hidden;
+}
+
+.card {
+    position: relative;
+    margin: 10px;
+    transition: all .2s ease-in-out;
+    height: 250px;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    z-index: 1000;
+}
+
+.card-body {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+a:hover {
+    cursor: pointer;
 }
