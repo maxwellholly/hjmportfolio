@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    justify-content: center;
+    height: calc(100vh - 50%);
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        flex-wrap: wrap;
+        padding: 5%;
+        margin-top: 15%;
+        width: 60%;
+    }
+}
