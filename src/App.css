@@ -174,6 +174,8 @@ button {
     margin: 10px;
     transition: all .2s ease-in-out;
     height: 250px;
+    width: 350px;
+    
 }
 
 .card:hover {
@@ -190,4 +192,8 @@ button {
 
 a:hover {
     cursor: pointer;
+}
+
+.card-img-top {
+    height: 100%;
 }
